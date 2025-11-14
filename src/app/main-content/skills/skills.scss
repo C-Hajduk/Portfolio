@@ -1,0 +1,54 @@
+section {
+  margin: 100px 100px;
+  height: 700px;
+  position: relative;
+  border: 6px solid black;
+  > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    > h2 {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0 10px;
+    }
+  }
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  height: 128px;
+  gap: 125px;
+  margin: 25px 0px;
+  > img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.last-icon {
+  display: flex;
+  align-items: end;
+  gap: 25px;
+  margin: 25px 0px;
+  > p {
+    font-size: 22px;
+    font-weight: 400;
+    > button {
+      font-family: 'Overpass';
+      font-weight: 400;
+      font-size: 22px;
+      border: none;
+      cursor: pointer;
+      &:hover {
+        color: rgba(0, 188, 143, 1);
+      }
+    }
+  }
+}
