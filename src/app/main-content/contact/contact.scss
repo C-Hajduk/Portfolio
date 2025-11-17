@@ -5,7 +5,8 @@ section {
   background-image: url(../../../../public/assets/img/Rectangle\ 5.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 800px;
+  min-height: 1000px;
+  position: relative;
 
   > :nth-child(1) {
     margin: 150px 100px 100px 100px;
@@ -35,7 +36,14 @@ section {
       font-size: 22px;
       background-color: black;
       color: rgb(255, 252, 243);
+      margin-bottom: 15px;
     }
+  }
+  > img {
+    background-color: black;
+    align-self: flex-end;
+    margin-right: 125px;
+    margin-bottom: 50px;
   }
 }
 
@@ -49,19 +57,45 @@ section {
     color: rgb(255, 252, 243);
     border-style: none;
     border-bottom: 3px solid rgb(255, 252, 243);
-    margin-top: 30px;
+    margin: 15px 0px 15px 0px;
+    height: 50px;
+  }
+  > input::placeholder {
+    color: rgb(255, 252, 243);
+    font-size: 16px;
+    font-family: 'Overpass';
   }
   > textarea {
     background-color: black;
     color: rgb(255, 252, 243);
     border-style: none;
     border-bottom: 3px solid rgb(255, 252, 243);
+    margin: 20px 0px 10px 0px;
+  }
+  > textarea::placeholder {
+    color: rgb(255, 252, 243);
+    font-size: 16px;
+    font-family: 'Overpass';
+  }
+  > p {
+    background-color: black;
+    color: rgb(255, 252, 243);
+    font-size: 14px;
+    > input {
+      margin-right: 10px;
+    }
+    >span {
+      background-color: black;
+      color: rgba(0, 188, 143, 1);
+      margin: 0px 4px;
+    }
   }
   > button {
     align-self: center;
     border: solid 4px;
     width: 230px;
     height: 68px;
+    font-family: 'Overpass';
     font-weight: 400;
     font-size: 23px;
     color: rgba(187, 187, 187, 0.5);
