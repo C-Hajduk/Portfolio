@@ -1,8 +1,9 @@
+@import './../../../styles.scss';
+
 section {
+  @include section-size();
   display: flex;
   justify-content: space-between;
-  margin: 100px 100px;
-  height: 650px;
 }
 
 .about-me {
@@ -10,24 +11,22 @@ section {
   flex-direction: column;
   width: 650px;
   > p {
-    font-weight: 400;
-    font-size: 22px;
+    @include text-style($size: 22px);
     margin: 50px 0px;
   }
   > button {
+    @include text-style($size: 23px);
     width: 213px;
     height: 68px;
     border: solid 4px;
-    font-weight: 400;
-    font-size: 23px;
     align-self: center;
     margin-top: 20px;
     cursor: pointer;
-  }
-  > button:hover{
-    transform: scalex(1.2);
-    transition: 0.2s ease-out;
-    font-weight: 700;
+    &:hover{
+      transform: scalex(1.2);
+      transition: 0.2s ease-out;
+      font-weight: 700;
+    }
   }
 }
 
@@ -36,10 +35,9 @@ section {
   flex-direction: column;
 
   > p {
+    @include text-style($size: 22px);
     display: flex;
     align-items: center;
-    font-weight: 400;
-    font-size: 22px;
     margin: 15px 0px;
     gap: 15px;
   }
