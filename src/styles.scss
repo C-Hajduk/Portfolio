@@ -23,7 +23,7 @@ p {
   font-family: 'Overpass';
 }
 
-@mixin dFlex($direction: column, $justify: center, $align: '') {
+@mixin dFlex($direction: column, $justify: center, $align: center) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
@@ -34,10 +34,10 @@ p {
   background-color: $color;
 }
 
-@mixin text-style($family: 'Overpass', $size: 16px, $weiht: 400) {
+@mixin text-style($family: 'Overpass', $size: 16px, $weight: 400) {
   font-family: $family;
   font-size: $size;
-  font-weight: $weiht;
+  font-weight: $weight;
 }
 
 @mixin section-size($heigt: 650px, $mxwidth: 1440px, $margin: 100px 100px) {

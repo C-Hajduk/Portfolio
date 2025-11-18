@@ -1,11 +1,27 @@
 <section>
-    <div class="card_header">
-        <h2>Portfolio</h2>
-        <p>Explore a selection of my work here - Interact with projects to see my skills in action</p>
-    </div>
+  <div class="card_header">
+    <h2>Portfolio</h2>
+    <p>Explore a selection of my work here - Interact with projects to see my skills in action</p>
+  </div>
 
-    <app-projects-right></app-projects-right>
-    <app-projects-left></app-projects-left>
-    <app-projects-right></app-projects-right>
-    <app-projects-left></app-projects-left>
+  <!-- single projects -->
+  @for(project of projects; track project.title){
+  <div class="card_portfolio" [ngClass]="project.direction">
+    <img src="{{ project.image }}" alt="" />
+
+    <div class="card_wrapper">
+      <div class="card_number" [ngClass]="project.direction">
+        <p>{{ project.number }}</p>
+      </div>
+
+      <div class="card_info" [ngClass]="project.direction">
+        <p>{{ project.title }}</p>
+        <p>{{ project.tech }}</p>
+        <p>{{ project.description }}</p>
+        <button>Github</button>
+      </div>
+    </div>
+  </div>
+
+  }
 </section>

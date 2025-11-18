@@ -1,0 +1,45 @@
+@import './../../../../styles.scss';
+
+section {
+    margin-top: 200px;
+}
+
+.card_portfolio {
+  display: flex;
+  justify-content: space-between;
+  width: 1240px;
+  
+  > p {
+    @include text-style($family: 'Syne', $size: 48px, $weight: 700px);
+    font-weight: bold;
+  }
+  > img {
+    width: 700px;
+    height: 400px;
+  }
+}
+
+.card_info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 500px;
+    > p:nth-child(1) {
+        @include text-style($family: 'Syne', $size: 45px, $weight: 800);
+    }
+    > p:nth-child(2) {
+      @include text-style($size: 23px);
+      color: rgba(0, 188, 143, 1);
+    }
+    > p:nth-child(3) {
+      @include text-style()
+    }
+    > button {
+      @include text-style($size: 23px);
+      @include borderStyling();
+      width: 189px;
+      height: 68px;
+    }
+}
+
+
