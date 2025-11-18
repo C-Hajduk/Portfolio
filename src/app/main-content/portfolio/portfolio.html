@@ -7,7 +7,7 @@
   <!-- single projects -->
   @for(project of projects; track project.title){
   <div class="card_portfolio" [ngClass]="project.direction">
-    <img src={{project.image}} alt=""/>
+    <img [ngStyle]="{opacity: project.hover ? project.image : project.imagecolor}" src={{project.image}} alt=""/>
 
     <div class="card_wrapper">
       <div class="card_number" [ngClass]="project.direction">

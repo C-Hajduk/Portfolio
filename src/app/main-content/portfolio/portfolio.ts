@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './portfolio.scss',
 })
 export class Portfolio {
-  hover = false;
+  opacity = false;
 
   projects = [
     {
