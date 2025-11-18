@@ -30,13 +30,39 @@ section {
   justify-content: space-between;
   width: 100%;
   margin-bottom: 150px;
+  position: relative;
   &.right {
     flex-direction: row-reverse;
   }
+
   > img {
     width: 700px;
     height: 400px;
+    position: relative;
   }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: -20px;
+    border: 4px solid black;
+    opacity: 0;
+    transition: .3s ease;
+    z-index: 1;
+    width: 700px;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
+
+.card_portfolio.right::before {
+left: auto; 
+right: 20px;
 }
 
 .card_wrapper {
@@ -62,8 +88,7 @@ section {
   padding-left: 100px;
   gap: 25px;
   width: 500px;
-  
-  
+
   > p:nth-child(1) {
     @include text-style($family: 'Syne', $size: 45px, $weight: 800);
   }
