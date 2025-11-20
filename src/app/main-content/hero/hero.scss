@@ -35,9 +35,11 @@ section {
     font-weight: 300;
     color: black;
     font-size: 22px;
-    writing-mode: vertical-lr; /* Text läuft von oben nach unten */
-    text-orientation: mixed; /* Buchstaben bleiben aufrecht */
+    text-decoration: none;
+    writing-mode: vertical-lr;
+    text-orientation: mixed; 
     transform: rotate(-180deg);
+    scroll-behavior: smooth;
   }
 }
 
