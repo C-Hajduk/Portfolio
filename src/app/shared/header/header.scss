@@ -1,25 +1,105 @@
+@import './../../../styles.scss';
+
 section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 60px;
+  margin: 0px 100px;
   height: 100px;
   position: sticky;
   z-index: 11;
   top: 0;
+}
 
-  > .logo {
+.logo {
     width: 40px;
     height: 40px;
   }
 
-  > .burger-menu {
-    width: 40px;
-    height: 32px;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 100px;
   }
+
+  .language_tuggle {
+    display: flex;
+    gap: 20px;
+
+    > button {
+      @include text-style($family: 'Syne', $size: 16px, $weight: 700);
+      cursor: pointer;
+      border: none;
+      background: none;
+      position: relative;
+      transition: background-size 0.25s ease;
+    }
+
+    > button.active {
+      border: 3px solid rgba(0, 188, 143, 1);
+    }
+
+    > button:not(.active) {
+      background-image: linear-gradient(currentColor);
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: 0% 2px;
+    }
+
+    > button:not(.active):hover {
+      background-size: 70% 2px;
+    }
+  }
+
+  .hamburger{
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../../../public/assets/icons/burger1.svg);
+    cursor: pointer;
 }
 
-.wrapper {
-    display: flex;
-    gap: 100px;
+.open-animation{
+    animation: openAnimation 0.5s linear forwards;
+}
+
+.close-animation{
+    animation: closeAnimation 0.5s linear forwards;
+}
+
+@keyframes openAnimation {
+    0%{
+        background-image: url(../../../../public/assets/icons/burger1.svg);
+    }
+    25%{
+        background-image: url(../../../../public/assets/icons/burger2.svg);
+    }
+    50%{
+        background-image: url(../../../../public/assets/icons/burger3.svg);
+    }
+    75%{
+        background-image: url(../../../../public/assets/icons/burger4.svg);
+    }
+    100%{
+        background-image: url(../../../../public/assets/icons/burger5.svg);
+    }
+}
+
+@keyframes closeAnimation {
+    0%{
+        background-image: url(../../../../public/assets/icons/burger5.svg);
+    }
+    25%{
+        background-image: url(../../../../public/assets/icons/burger4.svg);
+    }
+    50%{
+        background-image: url(../../../../public/assets/icons/burger3.svg);
+    }
+    75%{
+        background-image: url(../../../../public/assets/icons/burger2.svg);
+    }
+    100%{
+        background-image: url(../../../../public/assets/icons/burger1.svg);
+    }
 }

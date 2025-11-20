@@ -1,10 +1,20 @@
 <section>
   <img class="logo" src="assets/icons/logo3.png" alt="" />
+
   <div class="wrapper">
-    <div class="language tuggle">
-      <img src="assets/icons/Language_single_component_EN.svg" alt="" />
-      <img src="assets/icons/Language_single_component_DE.svg" alt="" />
+
+    <div class="language_tuggle">
+      <button class="btn1" [ngClass]="{'active': activeButton === 'btn1'}" 
+      (click)="setActive('btn1')">EN</button>
+
+      <button class="btn2" [ngClass]="{'active': activeButton === 'btn2'}" 
+      (click)="setActive('btn2')">DE</button>
     </div>
-    <img class="burger-menu" src="assets/icons/12. burger menu S3.svg" alt="" />
+
+    <div class="hamburger" [class]="{'open-animation' : openMenu, 'close-animation': !openMenu}"
+        (click)="startAnimation()">
+    </div>
+
   </div>
+
 </section>
