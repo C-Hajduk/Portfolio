@@ -1,15 +1,16 @@
+@import './../../../styles.scss';
+
 section {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-image: url(./../../../../public/assets/img/Rectangle5.png);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 1000px;
-  position: relative;
 
   > :nth-child(1) {
-    margin: 150px 100px 100px 100px;
+    margin: 150px 100px 60px 100px;
     align-self: flex-start;
     color: rgb(255, 252, 243);
     background-color: black;
@@ -39,44 +40,17 @@ section {
       margin-bottom: 15px;
     }
   }
-  > img {
-    background-color: black;
-    align-self: flex-end;
-    margin-right: 125px;
-    margin-bottom: 50px;
-  }
 }
-
 
 .card_contact {
   width: 600px;
   display: flex;
   flex-direction: column;
   background-color: black;
-  > input {
-    background-color: black;
-    color: rgb(255, 252, 243);
-    border-style: none;
-    border-bottom: 3px solid rgb(255, 252, 243);
-    margin: 15px 0px 15px 0px;
-    height: 50px;
-  }
-  > input::placeholder {
-    color: rgb(255, 252, 243);
-    font-size: 16px;
-    font-family: 'Overpass';
-  }
-  > textarea {
-    background-color: black;
-    color: rgb(255, 252, 243);
-    border-style: none;
-    border-bottom: 3px solid rgb(255, 252, 243);
-    margin: 20px 0px 10px 0px;
-  }
-  > textarea::placeholder {
-    color: rgb(255, 252, 243);
-    font-size: 16px;
-    font-family: 'Overpass';
+  > input:focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: none;
   }
   > p {
     background-color: black;
@@ -86,23 +60,85 @@ section {
       margin-right: 10px;
       accent-color: rgba(0, 188, 143, 1);
     }
-    >span {
+    > span {
       background-color: black;
       color: rgba(0, 188, 143, 1);
       margin: 0px 4px;
     }
   }
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+    margin: 15px 0;
+
+    > input, textarea {
+      width: 100%;
+      background-color: black;
+      color: rgb(255, 252, 243);
+      border: none;
+      border-bottom: 3px solid rgb(255, 252, 243);
+      padding: 12px 0px 8px;
+      font-size: 16px;
+      font-family: 'Overpass';
+      resize: none;
+
+      &:focus {
+        outline: none;
+        border-bottom: 3px solid rgba(0, 188, 143, 1);
+      }
+
+      &:focus + label,
+      &:not(:placeholder-shown) + label {
+        top: -12px;
+        left: 10px;
+        font-size: 14px;
+        color: rgba(0, 188, 143, 1);
+      }
+
+      &:hover, &:focus{
+        border: 2px solid white;
+      }
+    }
+
+    > label {
+      position: absolute;
+      left: 0;
+      top: 12px;
+      color: rgb(255, 252, 243);
+      font-size: 16px;
+      font-family: 'Overpass';
+      pointer-events: none;
+      transition: 0.25s ease;
+      background-color: black;
+    }
+  }
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
   > button {
-    align-self: center;
+    @include text-style($size: 23px);
     border: solid 4px;
     width: 230px;
     height: 68px;
-    font-family: 'Overpass';
-    font-weight: 400;
-    font-size: 23px;
     color: rgba(187, 187, 187, 0.5);
     background-color: black;
-    margin-top: 20px;
     cursor: pointer;
   }
+}
+
+.arrow {
+  background-color: black;
+  position: absolute;
+  right: 120px;
+  bottom: -20px;
+  transform: translateY(-50%);
+  background-color: black;
 }
