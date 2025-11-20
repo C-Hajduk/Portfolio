@@ -69,51 +69,53 @@ section {
 }
 
 .input-group {
-    position: relative;
+  position: relative;
+  width: 100%;
+  margin: 15px 0;
+
+  > input,
+  textarea {
     width: 100%;
-    margin: 15px 0;
+    background-color: black;
+    color: rgb(255, 252, 243);
+    border: none;
+    border-bottom: 3px solid rgb(255, 252, 243);
+    padding: 12px 0px 8px;
+    font-size: 16px;
+    font-family: 'Overpass';
+    resize: none;
 
-    > input, textarea {
-      width: 100%;
-      background-color: black;
-      color: rgb(255, 252, 243);
-      border: none;
-      border-bottom: 3px solid rgb(255, 252, 243);
-      padding: 12px 0px 8px;
-      font-size: 16px;
-      font-family: 'Overpass';
-      resize: none;
-
-      &:focus {
-        outline: none;
-        border-bottom: 3px solid rgba(0, 188, 143, 1);
-      }
-
-      &:focus + label,
-      &:not(:placeholder-shown) + label {
-        top: -12px;
-        left: 10px;
-        font-size: 14px;
-        color: rgba(0, 188, 143, 1);
-      }
-
-      &:hover, &:focus{
-        border: 2px solid white;
-      }
+    &:focus {
+      outline: none;
+      border-bottom: 3px solid rgba(0, 188, 143, 1);
     }
 
-    > label {
-      position: absolute;
-      left: 0;
-      top: 12px;
-      color: rgb(255, 252, 243);
-      font-size: 16px;
-      font-family: 'Overpass';
-      pointer-events: none;
-      transition: 0.25s ease;
-      background-color: black;
+    &:focus + label,
+    &:not(:placeholder-shown) + label {
+      top: -12px;
+      left: 10px;
+      font-size: 14px;
+      color: rgba(0, 188, 143, 1);
+    }
+
+    &:hover,
+    &:focus {
+      border: 2px solid white;
     }
   }
+
+  > label {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    color: rgb(255, 252, 243);
+    font-size: 16px;
+    font-family: 'Overpass';
+    pointer-events: none;
+    transition: 0.25s ease;
+    background-color: black !important;
+  }
+}
 
 .btn {
   display: flex;
@@ -141,4 +143,17 @@ section {
   bottom: -20px;
   transform: translateY(-50%);
   background-color: black;
+  &:hover {
+    animation: stretchArrow 0.9s ease-in-out forwards;
+  }
 }
+
+@keyframes stretchArrow {
+  0% {
+    transform: scaleY(1) translateY(-50%);
+  }
+  100% {
+    transform: scaleY(1.5) translateY(-50%);
+  }
+}
+

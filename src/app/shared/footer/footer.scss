@@ -19,6 +19,27 @@ section {
             background-color: black;
             width: 40px;
             height: 40px;
+            &:hover {
+                animation: bounce 1s ease-out forwards;
+            }
         }
+    }
+}
+
+@keyframes bounce {
+  0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-15px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
