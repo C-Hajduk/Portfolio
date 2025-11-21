@@ -9,23 +9,28 @@
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <!-- Name-Feld -->
       <div class="input-group">
-        <input #name="ngModel" 
-        [(ngModel)]="contactData.name" 
-        type="text" 
-        name="name" 
-        minlength="4" 
-        placeholder="" 
-        required 
+        <input
+          #name="ngModel"
+          [(ngModel)]="contactData.name"
+          type="text"
+          name="name"
+          minlength="4"
+          placeholder=""
+          required
         />
         <label for="name">Your Name</label>
         @if(!name.valid && name.touched) {
-            <span>Please enter your name</span>
-          }
+        <span class="error-icon">!</span>
+        <span class="error-message">Please enter your name</span>
+        } @if(name.valid && name.touched) {
+        <span class="success-icon">✓</span>
+        }
       </div>
 
       <!-- E-Mail-Feld -->
       <div class="input-group">
-        <input #email="ngModel"
+        <input
+          #email="ngModel"
           [(ngModel)]="contactData.email"
           type="email"
           name="email"
@@ -36,13 +41,17 @@
         />
         <label for="email">Your Email</label>
         @if(!email.valid && email.touched) {
-            <span>Please enter your email</span>
-          }
+        <span class="error-icon">!</span>
+        <span class="error-message">Please enter your email</span>
+        } @if(email.valid && email.touched) {
+        <span class="success-icon">✓</span>
+        }
       </div>
 
       <!-- Nachrichten-Feld -->
       <div class="input-group">
-        <textarea #message="ngModel"
+        <textarea
+          #message="ngModel"
           [(ngModel)]="contactData.message"
           name="message"
           id="message"
@@ -50,13 +59,16 @@
           placeholder=""
           rows="10"
           required
-          ></textarea>
-          <label for="message">Your Message</label>
-          @if(!message.valid && message.touched) {
-            <span>Please enter a message</span>
-          }
-        </div>
-        <p class="checkbox">
+        ></textarea>
+        <label for="message">Your Message</label>
+        @if(!message.valid && message.touched) {
+        <span class="error-icon">!</span>
+        <span class="error-message">Please enter a message</span>
+        } @if(message.valid && message.touched) {
+        <span class="success-icon">✓</span>
+        }
+      </div>
+      <p class="checkbox">
         <input type="checkbox" />I've read the <span>privacy police</span> and agree to the
         processing of my data as outlined.
       </p>
