@@ -1,7 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Footer } from './shared/footer/footer';
 import { Header } from './shared/header/header';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,10 @@ import { Header } from './shared/header/header';
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
-export class App {
+export class App implements OnInit{
+  ngOnInit(): void {
+    AOS.init();
+  }
   protected readonly title = signal('Portfolio');
 }
 console.log(
