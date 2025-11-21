@@ -6,31 +6,64 @@
   </div>
 
   <div class="card_contact">
-    <!-- Name-Feld -->
-     <div class="input-group">
-       <input type="text" name="name" placeholder="" required/>
-       <label for="name">Your Name</label>
-     </div>
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+      <!-- Name-Feld -->
+      <div class="input-group">
+        <input #name="ngModel" 
+        [(ngModel)]="contactData.name" 
+        type="text" 
+        name="name" 
+        minlength="4" 
+        placeholder="" 
+        required 
+        />
+        <label for="name">Your Name</label>
+        @if(!name.valid && name.touched) {
+            <span>Please enter your name</span>
+          }
+      </div>
 
-    <!-- E-Mail-Feld -->
-    <div class="input-group">
-       <input type="email" name="name" placeholder="" required/>
-       <label for="email">Your Email</label>
-     </div>
+      <!-- E-Mail-Feld -->
+      <div class="input-group">
+        <input #email="ngModel"
+          [(ngModel)]="contactData.email"
+          type="email"
+          name="email"
+          minlength="4"
+          placeholder=""
+          required
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+        />
+        <label for="email">Your Email</label>
+        @if(!email.valid && email.touched) {
+            <span>Please enter your email</span>
+          }
+      </div>
 
-    <!-- Nachrichten-Feld -->
-     <div class="input-group">
-       <textarea name="message" id="message" placeholder="" rows="10" required></textarea>
-       <label for="message">Your Message</label>
-     </div>
-
-    <p>
-      <input type="checkbox" />I've read the <span>privacy police</span> and agree to the processing
-      of my data as outlined.
-    </p>
+      <!-- Nachrichten-Feld -->
+      <div class="input-group">
+        <textarea #message="ngModel"
+          [(ngModel)]="contactData.message"
+          name="message"
+          id="message"
+          minlength="4"
+          placeholder=""
+          rows="10"
+          required
+          ></textarea>
+          <label for="message">Your Message</label>
+          @if(!message.valid && message.touched) {
+            <span>Please enter a message</span>
+          }
+        </div>
+        <p class="checkbox">
+        <input type="checkbox" />I've read the <span>privacy police</span> and agree to the
+        processing of my data as outlined.
+      </p>
+      <div class="btn">
+        <input type="submit" value="Send Message" />
+      </div>
+      <img class="arrow" src="assets/icons/arrow_up.svg" alt="" />
+    </form>
   </div>
-  <div class="btn">
-    <button type="submit">Send message</button>
-  </div>
-  <img class="arrow" src="assets/icons/arrow_up.svg" alt="" />
 </section>

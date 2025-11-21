@@ -47,25 +47,15 @@ section {
   display: flex;
   flex-direction: column;
   background-color: black;
+  > form {
+    background-color: black;
+  }
   > input:focus,
   textarea:focus {
     outline: none;
     box-shadow: none;
   }
-  > p {
-    background-color: black;
-    color: rgb(255, 252, 243);
-    font-size: 14px;
-    > input {
-      margin-right: 10px;
-      accent-color: rgba(0, 188, 143, 1);
-    }
-    > span {
-      background-color: black;
-      color: rgba(0, 188, 143, 1);
-      margin: 0px 4px;
-    }
-  }
+  
 }
 
 .input-group {
@@ -113,8 +103,23 @@ section {
     font-family: 'Overpass';
     pointer-events: none;
     transition: 0.25s ease;
-    background-color: black !important;
+    background-color: black;
   }
+}
+
+.checkbox {
+    background-color: black;
+    color: rgb(255, 252, 243);
+    font-size: 14px;
+    > input {
+      margin-right: 10px;
+      accent-color: rgba(0, 188, 143, 1);
+    }
+    > span {
+      background-color: black;
+      color: rgba(0, 188, 143, 1);
+      margin: 0px 4px;
+    }
 }
 
 .btn {
@@ -125,7 +130,7 @@ section {
   margin-top: 20px;
   position: relative;
   width: 100%;
-  > button {
+  > input {
     @include text-style($size: 23px);
     border: solid 4px;
     width: 230px;
