@@ -41,10 +41,9 @@ section {
     position: relative;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    transition: filter .3s ease-in-out;
+    transition: filter 0.3s ease-in-out;
   }
 
-  
   &::before {
     content: '';
     position: absolute;
@@ -68,6 +67,10 @@ section {
     filter: grayscale(0%);
   }
 
+  // Hover effect for card_info
+  &:hover .card_info {
+    opacity: 1;
+  }
 }
 
 .card_portfolio.right::before {
@@ -98,6 +101,8 @@ section {
   padding-left: 100px;
   gap: 25px;
   width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
   &.right {
     align-items: end;
     padding-right: 100px;
