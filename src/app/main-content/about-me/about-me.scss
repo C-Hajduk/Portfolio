@@ -55,13 +55,33 @@ section {
   height: 500px;
   width: 500px;
   align-self: flex-end;
-  overflow: hidden;
   margin: 20px;
+  position: relative;
   > img {
     width: 100%;
     height: 100%;
+    position: relative;
     object-fit: cover;
     object-position: 90% 10%;
-    transition: transform 0.5s ease;
+    transition: filter 0.5s ease;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: -20px;
+    border: 4px solid black;
+    opacity: 0;
+    transition: 0.1s ease;
+    z-index: 1;
+    width: 500px;
+    height: 500px;
+  }
+
+  &:hover::before {
+    opacity: 1;
   }
 }
