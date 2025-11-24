@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  margin: 0px 100px;
+  > h2 {
+    margin-top: 50px;
+  }
+}
+
+.segments_header {
+  margin: 70px 0px 30px;
+  > ul {
+    li {
+      font-size: 16px;
+      font-family: 'Overpass';
+    }
+  }
+  > p {
+    font-size: 16px;
+    font-family: 'Overpass';
+  }
+}
+
+.segments {
+  margin-bottom: 30px;
+  > p {
+    font-size: 16px;
+    font-family: 'Overpass';
+    > span {
+      color: rgba(0, 188, 143, 1);
+    }
+  }
+}
+
+.heel {
+    content: '';
+    padding: 50px 0px;
+}

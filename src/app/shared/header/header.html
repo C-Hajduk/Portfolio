@@ -1,20 +1,29 @@
 <section>
-  <img class="logo" src="assets/icons/logo4.png" alt="" />
+  <a href="#hero"><img src="assets/icons/logo4.png" alt="" /></a>
 
   <div class="wrapper">
-
     <div class="language_tuggle">
-      <button class="btn1" [ngClass]="{'active': activeButton === 'btn1'}" 
-      (click)="setActive('btn1')">EN</button>
+      <button
+        class="btn1"
+        [ngClass]="{ active: activeButton === 'btn1' }"
+        (click)="setActive('btn1')"
+      >
+        EN
+      </button>
 
-      <button class="btn2" [ngClass]="{'active': activeButton === 'btn2'}" 
-      (click)="setActive('btn2')">DE</button>
+      <button
+        class="btn2"
+        [ngClass]="{ active: activeButton === 'btn2' }"
+        (click)="setActive('btn2')"
+      >
+        DE
+      </button>
     </div>
 
-    <div class="hamburger" [class]="{'open-animation' : openMenu, 'close-animation': !openMenu}"
-        (click)="startAnimation()">
-    </div>
-
+    <div
+      class="hamburger"
+      [class]="{ 'open-animation': openMenu, 'close-animation': !openMenu }"
+      (click)="startAnimation()"
+    ></div>
   </div>
-
 </section>

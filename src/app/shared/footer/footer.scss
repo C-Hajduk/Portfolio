@@ -1,45 +1,91 @@
+@import './../../../styles.scss';
+
 section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  padding: 0px 100px;
+  background-color: black;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  gap: 15px;
+  > a {
+    background-color: black;
+    cursor: default;
+    > img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  > P {
+    background-color: black;
+    color: rgb(255, 252, 243);
+    @include text-style($size: 22px);
+  }
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  gap: 25px;
+  > div {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    padding: 0px 100px;
+    gap: 60px;
     background-color: black;
     > img {
-        width: 50px;
-        height: 50px;
+      background-color: black;
+      width: 40px;
+      height: 40px;
+      &:hover {
+        animation: bounce 1s ease-out forwards;
+      }
     }
-
-    > div {
-        display: flex;
-        gap: 60px;
+  }
+  > p {
+    align-self: flex-end;
+    > a {
+      > button {
         background-color: black;
-        margin: 0px 60px;
-        > img {
-            background-color: black;
-            width: 40px;
-            height: 40px;
-            &:hover {
-                animation: bounce 1s ease-out forwards;
-            }
+        color: rgb(255, 252, 243);
+        @include text-style($size: 16px);
+        border: none;
+        cursor: pointer;
+        transition: background-size 0.25s ease;
+        background-size: 0% 2px;
+        &:hover {
+          color: rgba(0, 188, 143, 1);
+          font-weight: bold;
+          background-image: linear-gradient(currentColor);
+          background-position: center bottom;
+          background-repeat: no-repeat;
+          background-size: 90% 2px;
         }
+      }
     }
+  }
 }
 
 @keyframes bounce {
   0% {
-        transform: translateY(0);
-    }
-    25% {
-        transform: translateY(-15px);
-    }
-    50% {
-        transform: translateY(0);
-    }
-    75% {
-        transform: translateY(-8px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

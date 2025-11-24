@@ -2,6 +2,7 @@
   margin: 0;
   box-sizing: border-box;
   background-color: rgb(255, 252, 243);
+   scroll-behavior: smooth;
 }
 
 h1 {
@@ -17,6 +18,21 @@ h2 {
   &:hover {
     color: rgba(0, 188, 143, 1);
   }
+}
+
+h4 {
+  font-size: 24px;
+  font-family: 'Overpass';
+  font-weight: 800;
+  font-weight: bold;
+  color: rgba(0, 188, 143, 1);
+}
+
+h5 {
+  font-size: 19px;
+  font-family: 'Overpass';
+  font-weight: 700;
+  color: rgba(0, 188, 143, 1);
 }
 
 p {
