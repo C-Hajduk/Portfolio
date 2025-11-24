@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NgClass } from "@angular/common";
+import { BurgermenuService } from '../../burgermenu-service';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,9 @@ import { NgClass } from "@angular/common";
   styleUrl: './header.scss',
 })
 export class Header {
+
+  burgermenu = inject(BurgermenuService);
+
   openMenu: boolean = false;
 
   activeButton: 'btn1' | 'btn2' = 'btn1';
