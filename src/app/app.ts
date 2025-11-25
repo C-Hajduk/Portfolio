@@ -10,7 +10,7 @@ import AOS from 'aos';
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
-export class App implements OnInit{
+export class App implements OnInit {
   ngOnInit(): void {
     AOS.init();
   }
