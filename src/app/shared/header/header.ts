@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { NgClass } from "@angular/common";
+import { NgClass } from '@angular/common';
 import { BurgermenuService } from '../../burgermenu-service';
 
 @Component({
@@ -10,24 +10,15 @@ import { BurgermenuService } from '../../burgermenu-service';
   styleUrl: './header.scss',
 })
 export class Header {
-
   burgermenu = inject(BurgermenuService);
 
-  openMenu: boolean = false;
+  get openMenu() {
+    return this.burgermenu.isOpen;
+  }
 
   activeButton: 'btn1' | 'btn2' = 'btn1';
 
   setActive(button: 'btn1' | 'btn2') {
     this.activeButton = button;
-  }
-
-  startAnimation() {
-    this.openMenu = !this.openMenu;
-    // if(this.openMenu){
-    //   this.openMenu = false;
-    // }
-    // else{
-    //   this.openMenu = true;
-    // }
   }
 }

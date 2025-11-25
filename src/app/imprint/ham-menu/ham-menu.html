@@ -1,12 +1,29 @@
 @if (burgermenu.isOpen) {
+<section class="layout">
   <app-header></app-header>
-  <section (click)="burgermenu.close()">
-    <div>
-      <ul>
-        <li>About me</li>
-        <li>My skills</li>
-        <li>Portfolio</li>
-      </ul>
+  <div class="skipp">
+    <div
+      [class]="{ showBorder: activeIndex === 0 }"
+      (mousedown)="openborder(0)"
+      (mouseup)="hideBorder()"
+    >
+      <p>About me</p>
     </div>
-  </section>
+    <div
+      [class]="{ showBorder: activeIndex === 1 }"
+      (mousedown)="openborder(1)"
+      (mouseup)="hideBorder()"
+    >
+      <p>My Skills</p>
+    </div>
+    <div
+      [class]="{ showBorder: activeIndex === 2 }"
+      (mousedown)="openborder(2)"
+      (mouseup)="hideBorder()"
+    >
+      <p>Portfolio</p>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</section>
 }

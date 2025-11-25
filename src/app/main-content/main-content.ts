@@ -7,10 +7,11 @@ import { ArrowLeft } from './arrow-left/arrow-left';
 import { Portfolio } from './portfolio/portfolio';
 import { References } from './references/references';
 import { Contact } from './contact/contact';
+import { HamMenu } from "../imprint/ham-menu/ham-menu";
 
 @Component({
   selector: 'app-main-content',
-  imports: [Hero, AboutMe, ArrowRight, Skills, ArrowLeft, Portfolio, References, Contact],
+  imports: [Hero, AboutMe, ArrowRight, Skills, ArrowLeft, Portfolio, References, Contact, HamMenu],
   templateUrl: './main-content.html',
   styleUrl: './main-content.scss',
 })
