@@ -1,9 +1,12 @@
-<section id="ham-menu">
-  <div class="off-screen-menu">
-    <ul>
-      <li>About me</li>
-      <li>My skills</li>
-      <li>Portfolio</li>
-    </ul>
-  </div>
-</section>
+@if (burgermenu.isOpen) {
+  <app-header></app-header>
+  <section (click)="burgermenu.close()">
+    <div>
+      <ul>
+        <li>About me</li>
+        <li>My skills</li>
+        <li>Portfolio</li>
+      </ul>
+    </div>
+  </section>
+}

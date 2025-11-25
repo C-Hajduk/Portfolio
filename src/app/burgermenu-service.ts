@@ -6,5 +6,17 @@ import { Injectable } from '@angular/core';
 export class BurgermenuService {
 
   isOpen = false;
+
+  open() {
+    this.isOpen = true;
+  }
+
+  close() {
+    this.isOpen = false;
+  }
+
+  switch() {
+    this.isOpen = !this.isOpen
+  }
   
 }
