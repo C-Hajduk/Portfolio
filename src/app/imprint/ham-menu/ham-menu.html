@@ -7,21 +7,21 @@
       (mousedown)="openborder(0)"
       (mouseup)="hideBorder()"
     >
-      <p>About me</p>
+      <p (click)="navigateTo('about-me')">About me</p>
     </div>
     <div
       [class]="{ showBorder: activeIndex === 1 }"
       (mousedown)="openborder(1)"
       (mouseup)="hideBorder()"
     >
-      <p>My Skills</p>
+      <p (click)="navigateTo('skills')">My Skills</p>
     </div>
     <div
       [class]="{ showBorder: activeIndex === 2 }"
       (mousedown)="openborder(2)"
       (mouseup)="hideBorder()"
     >
-      <p>Portfolio</p>
+      <p (click)="navigateTo('portfolio')">Portfolio</p>
     </div>
   </div>
   <app-footer></app-footer>

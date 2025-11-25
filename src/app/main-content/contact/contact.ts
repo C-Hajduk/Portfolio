@@ -10,8 +10,7 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrls: ['./contact.scss'],
 })
 export class Contact {
-
-  http = inject(HttpClient)
+  http = inject(HttpClient);
 
   contactData = {
     name: '',

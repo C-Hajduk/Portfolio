@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root',
 })
@@ -17,6 +18,5 @@ export class BurgermenuService {
 
   switch() {
     this.isOpen = !this.isOpen
-  }
-  
+  }  
 }

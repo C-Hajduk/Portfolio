@@ -1,7 +1,8 @@
 import { Component, inject } from '@angular/core';
-import { Header } from "../../shared/header/header";
+import { Router } from '@angular/router';
+import { Header } from '../../shared/header/header';
 import { BurgermenuService } from '../../burgermenu-service';
-import { Footer } from "../../shared/footer/footer";
+import { Footer } from '../../shared/footer/footer';
 
 @Component({
   selector: 'app-ham-menu',
@@ -11,15 +12,25 @@ import { Footer } from "../../shared/footer/footer";
 })
 export class HamMenu {
   burgermenu = inject(BurgermenuService);
+  router = inject(Router);
 
   activeIndex: number | null = null;
 
   openborder(index: number) {
     this.activeIndex = this.activeIndex === index ? null : index;
-
   }
 
   hideBorder() {
-    this.activeIndex = null
+    this.activeIndex = null;
+  }
+
+  navigateTo(fragment: string) {
+    this.burgermenu.close();
+
+    this.router.navigate(['/'], { fragment: fragment }).then(() => {
+      setTimeout(() => {
+        document.getElementById(fragment)?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    });
   }
 }

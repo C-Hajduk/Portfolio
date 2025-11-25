@@ -7,7 +7,7 @@ import { ArrowLeft } from './arrow-left/arrow-left';
 import { Portfolio } from './portfolio/portfolio';
 import { References } from './references/references';
 import { Contact } from './contact/contact';
-import { HamMenu } from "../imprint/ham-menu/ham-menu";
+import { HamMenu } from '../imprint/ham-menu/ham-menu';
 
 @Component({
   selector: 'app-main-content',
@@ -15,6 +15,4 @@ import { HamMenu } from "../imprint/ham-menu/ham-menu";
   templateUrl: './main-content.html',
   styleUrl: './main-content.scss',
 })
-export class MainContent {
-
-}
+export class MainContent {}
