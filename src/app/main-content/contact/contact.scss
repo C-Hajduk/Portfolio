@@ -185,6 +185,7 @@ section {
   bottom: -20px;
   transform: translateY(-50%);
   background-color: black;
+  animation: shrinkArrow 0.9s ease-in-out forwards;
   &:hover {
     animation: stretchArrow 0.9s ease-in-out forwards;
   }
@@ -196,5 +197,13 @@ section {
   }
   100% {
     transform: scaleY(1.5) translateY(-50%);
+  }
+}
+@keyframes shrinkArrow {
+  0% {
+    transform: scaleY(1.5) translateY(-50%);
+  }
+  100% {
+    transform: scaleY(1) translateY(-50%);
   }
 }

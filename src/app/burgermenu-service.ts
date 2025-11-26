@@ -18,5 +18,5 @@ export class BurgermenuService {
 
   switch() {
     this.isOpen = !this.isOpen
-  }  
+  }
 }

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { BurgermenuService } from '../../burgermenu-service';
+
 
 @Component({
   selector: 'app-footer',
@@ -6,4 +8,6 @@ import { Component } from '@angular/core';
   templateUrl: './footer.html',
   styleUrl: './footer.scss',
 })
-export class Footer {}
+export class Footer {
+  burgermenu = inject(BurgermenuService);
+}

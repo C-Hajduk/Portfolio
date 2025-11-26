@@ -18,28 +18,18 @@ section {
   position: relative;
 
   > div {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 550px;
-    height: 160px;
     margin-bottom: 25px;
-    &::before {
-      position: relative;
-      content: '';
-      left: -270px;
-      bottom: -120px;
-      width: 30px;
-      height: 50px;
-      border-left: 4px solid black;
-      border-bottom: 4px solid black;
-      transition: opacity 0.25s ease;
-    }
-    &:hover::before{
+    
+    &:hover > .hover-div {
       opacity: 0;
     }
     &:after {
-      content: "";
+      content: '';
       position: relative;
       background-color: black;
       height: 4px;
@@ -56,6 +46,18 @@ section {
       cursor: pointer;
     }
   }
+}
+
+.hover-div {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 30px;
+  height: 50px;
+  border-left: 4px solid black;
+  border-bottom: 4px solid black;
+  transition: opacity 0.25s ease;
+  background: none;
 }
 
 .showBorder {
@@ -77,9 +79,9 @@ app-footer {
   }
   10% {
     opacity: 1;
-    transform: scaleX(1);    // 100% sichtbar
+    transform: scaleX(1); // 100% sichtbar
   }
   100% {
-    transform: scaleX(0.3);  // auf 30% geschrumpft
+    transform: scaleX(0.3); // auf 30% geschrumpft
   }
 }

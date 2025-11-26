@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { Footer } from './shared/footer/footer';
 import { Header } from './shared/header/header';
 import AOS from 'aos';
+import { HamMenu } from './imprint/ham-menu/ham-menu';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Footer, Header],
+  imports: [RouterOutlet, Footer, Header, HamMenu],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
