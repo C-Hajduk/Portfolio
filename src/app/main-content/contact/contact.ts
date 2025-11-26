@@ -16,6 +16,7 @@ export class Contact {
     name: '',
     email: '',
     message: '',
+    privacy: false,
   };
 
   mailTest = true;

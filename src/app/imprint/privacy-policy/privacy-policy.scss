@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  margin: 0px 100px;
+  min-height: 100vh;
+  > h2 {
+    margin-top: 50px;
+  }
+}
+
+.segments {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  > p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: 'Overpass';
+  }
+}
+
+app-footer {
+  margin-top: auto;
+}

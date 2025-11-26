@@ -152,10 +152,19 @@ section {
     margin-right: 10px;
     accent-color: rgba(0, 188, 143, 1);
   }
-  > span {
+  > a {
     background-color: black;
-    color: rgba(0, 188, 143, 1);
-    margin: 0px 4px;
+    text-decoration: none;
+    &:hover {
+      font-weight: bold;
+    }
+    > span {
+      background-color: black;
+      color: rgba(0, 188, 143, 1);
+      margin: 0px 4px;
+      cursor: pointer;
+      
+    }
   }
 }
 

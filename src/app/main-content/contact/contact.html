@@ -69,9 +69,20 @@
         }
       </div>
       <p class="checkbox">
-        <input type="checkbox" />I've read the <span>privacy police</span> and agree to the
-        processing of my data as outlined.
+        <input
+          type="checkbox"
+          name="privacy"
+          [(ngModel)]="contactData.privacy"
+          #privacy="ngModel"
+          required
+        />
+        I've read the <a href="privacy-policy"><span>privacy policy</span></a>
+        and agree to the processing of my data as outlined. 
+        @if(!privacy.valid && privacy.touched) {
+        <span class="error-message">Please accept the privacy policy</span>
+        }
       </p>
+
       <div class="btn">
         <input type="submit" value="Send Message" />
       </div>
