@@ -1,0 +1,9 @@
+{
+  "hero": { "title": "Frontend<br>Developer" },
+  "about-me": { "title": "About Me" },
+  "skills": { "title": "Skills" },
+  "portfolio": { "title": "Portfolio" },
+  "references": { "title": "References" },
+  "contact": { "title": "Contact" },
+  "imprint": { "title": "Impressum" }
+}

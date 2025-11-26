@@ -1,6 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { BurgermenuService } from '../../burgermenu-service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -11,14 +12,19 @@ import { BurgermenuService } from '../../burgermenu-service';
 })
 export class Header {
   burgermenu = inject(BurgermenuService);
+  translateService = inject(TranslateService);
 
   get openMenu() {
     return this.burgermenu.isOpen;
   }
 
-  activeButton: 'btn1' | 'btn2' = 'btn1';
+  activeButton = signal<'btn1' | 'btn2'>('btn1');
 
   setActive(button: 'btn1' | 'btn2') {
-    this.activeButton = button;
+    this.activeButton.set(button);
+  }
+
+  changeLanguage(lang: string) {
+    this.translateService.use(lang);
   }
 }

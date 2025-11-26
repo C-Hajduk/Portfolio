@@ -5,7 +5,7 @@
     <div class="language_tuggle">
       <button
         class="btn1"
-        [ngClass]="{ active: activeButton === 'btn1' }"
+        [ngClass]="{ active: activeButton() === 'btn1' }"
         (click)="setActive('btn1')"
       >
         EN
@@ -13,7 +13,7 @@
 
       <button
         class="btn2"
-        [ngClass]="{ active: activeButton === 'btn2' }"
+        [ngClass]="{ active: activeButton() === 'btn2' }"
         (click)="setActive('btn2')"
       >
         DE

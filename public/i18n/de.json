@@ -1,3 +1,9 @@
 {
-    ""
+  "hero": { "title": "Frontend Entwickler" },
+  "about-me": { "title": "Über mich" },
+  "skills": { "title": "Fähigkeiten" },
+  "portfolio": { "title": "Portfolio" },
+  "references": { "title": "Referenzen" },
+  "contact": { "title": "Kontakt" },
+  "imprint": { "title": "Impressum" }
 }

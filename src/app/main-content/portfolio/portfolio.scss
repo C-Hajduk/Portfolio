@@ -119,7 +119,7 @@ section {
 .card_info {
   display: flex;
   flex-direction: column;
-  padding-left: 100px;
+  margin-left: 25px;
   gap: 25px;
   width: 100%;
   opacity: 0;
@@ -127,8 +127,8 @@ section {
   transition: opacity 0.5s ease, transform 0.5s ease;
   &.right{
     align-items: start;
-    transform: translateX(500px);
-    padding-right: 100px;
+    transform: translateX(200px);
+    margin-left: -25px;
 
   }
   > p:nth-child(1) {
