@@ -88,6 +88,11 @@ section {
     transform: scale(2.5) rotate(-125deg);
   }
 }
+.card_portfolio:hover .card_info {
+  /* Zielzustand: sichtbar & an Ort */
+  opacity: 1;
+  transform: translateX(50px);
+}
 
 .card_portfolio.right::before {
   left: auto;
@@ -118,10 +123,13 @@ section {
   gap: 25px;
   width: 100%;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  &.right {
-    align-items: end;
+  transform: translateX(-200px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  &.right{
+    align-items: start;
+    transform: translateX(500px);
     padding-right: 100px;
+
   }
   > p:nth-child(1) {
     @include text-style($family: 'Syne', $size: 45px, $weight: 800);
