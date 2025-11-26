@@ -76,15 +76,17 @@
           #privacy="ngModel"
           required
         />
-        I've read the <a href="privacy-policy"><span>privacy policy</span></a>
-        and agree to the processing of my data as outlined. 
-        @if(!privacy.valid && privacy.touched) {
-        <span class="error-message">Please accept the privacy policy</span>
+        I've read the 
+        <a href="privacy-policy"><span>privacy policy</span></a>
+        and agree to the processing of my data as outlined.
+        @if(!privacy.valid && contactForm.submitted) {
+          <span class="error-message">Please accept the privacy policy</span>
         }
       </p>
 
       <div class="btn">
         <input type="submit" value="Send Message" />
+        
       </div>
       <a href="#hero"><img class="arrow" src="assets/icons/arrow_up.svg" alt="" /></a>
     </form>
