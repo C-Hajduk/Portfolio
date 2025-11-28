@@ -6,7 +6,7 @@
       <button
         class="btn1"
         [ngClass]="{ active: activeButton() === 'btn1' }"
-        (click)="setActive('btn1')"
+        (click)="switchLanguage('btn1', 'en')"
       >
         EN
       </button>
@@ -14,7 +14,7 @@
       <button
         class="btn2"
         [ngClass]="{ active: activeButton() === 'btn2' }"
-        (click)="setActive('btn2')"
+        (click)="switchLanguage('btn2', 'de')"
       >
         DE
       </button>

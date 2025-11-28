@@ -1,15 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, TranslatePipe],
   templateUrl: './contact.html',
   styleUrls: ['./contact.scss'],
 })
 export class Contact {
+  translate = inject(TranslateService);
+
   http = inject(HttpClient);
 
   contactData = {

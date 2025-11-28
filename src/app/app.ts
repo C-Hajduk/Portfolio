@@ -1,11 +1,12 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Footer } from './shared/footer/footer';
 import { Header } from './shared/header/header';
 import { HamMenu } from './imprint/ham-menu/ham-menu';
+import { TranslatePipe } from '@ngx-translate/core';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Footer, Header, HamMenu],
+  imports: [RouterOutlet, Footer, Header, HamMenu, TranslatePipe],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

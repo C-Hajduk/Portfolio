@@ -3,7 +3,6 @@ import {
   provideBrowserGlobalErrorListeners,
   provideZoneChangeDetection,
   inject,
-  provideAppInitializer,
 } from '@angular/core';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
@@ -32,10 +31,5 @@ export const appConfig: ApplicationConfig = {
         scrollPositionRestoration: 'enabled',
       })
     ),
-    provideHttpClient(),
-    provideAppInitializer(() => {
-      const translateService = inject(TranslateService);
-      translateService.use(translateService.getBrowserLang() || 'en');
-    }),
   ],
 };

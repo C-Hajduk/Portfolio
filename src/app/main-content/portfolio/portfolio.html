@@ -1,14 +1,14 @@
 <section>
   <div class="card_header">
-    <h2>Portfolio</h2>
-    <p>Explore a selection of my work here - Interact with projects to see my skills in action</p>
+    <h2>{{ 'portfolio.title' | translate }}</h2>
+    <p>{{ 'portfolio.description' | translate }}</p>
   </div>
 
   <!-- single projects -->
   @for(project of projects; track project.title){
   <div class="card_portfolio" [ngClass]="project.direction">
     <img src="{{ project.image }}" alt="" />
-    <img src="assets/icons/arrow-portfolio.svg" alt="">
+    <img src="assets/icons/arrow-portfolio.svg" alt="" />
 
     <div class="card_wrapper">
       <div class="card_number" [ngClass]="project.direction">
@@ -18,7 +18,7 @@
       <div class="card_info" [ngClass]="project.direction">
         <p>{{ project.title }}</p>
         <p>{{ project.tech }}</p>
-        <p>{{ project.description }}</p>
+        <p>{{ project.descriptionKey | translate }}</p>
         <button>Github</button>
       </div>
     </div>

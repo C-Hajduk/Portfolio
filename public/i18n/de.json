@@ -1,9 +1,56 @@
 {
   "hero": { "title": "Frontend Entwickler" },
-  "about-me": { "title": "Über mich" },
-  "skills": { "title": "Fähigkeiten" },
-  "portfolio": { "title": "Portfolio" },
-  "references": { "title": "Referenzen" },
-  "contact": { "title": "Kontakt" },
-  "imprint": { "title": "Impressum" }
+  "about-me": {
+    "title": "Über mich",
+    "description": "Schreiben Sie einige Informationen über sich selbst, die mit IT zu tun haben. Warum begeistern Sie sich für das Programmieren? Zeigen Sie Ihre Bereitschaft, neue Technologien zu erlernen. Fügen Sie eine kurze Beschreibung Ihres Ansatzes zur Problemlösung hinzu. Sie können einige wichtige Eigenschaften wie analytisches Denken, Kreativität, Ausdauer und Teamfähigkeit angeben.",
+    "location": "mit Sitz in Oyten",
+    "remote": "Offen für Remote-Arbeit",
+    "letstalk": "Lass uns reden"
+  },
+  "skills": {
+    "title": "Fähigkeiten",
+    "description": "Sie finden die gewünschte Fertigkeit nicht?",
+    "contact": "Kontaktiere mich",
+    "ready": "Ich bin immer bereit zu lernen!"
+  },
+
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Entdecken Sie hier eine Auswahl meiner Arbeiten – interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "project1": {
+      "description": "Basierend auf der PokeAPI, einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
+    },
+    "project2": {
+      "description": "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert."
+    },
+    "project3": {
+      "description": "Aufgabenverwaltung, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben per Ziehen und Ablegen, weisen Sie Benutzer und Kategorien zu."
+    }
+  },
+  "references": {
+    "title": "Referenzen",
+    "description1": "Ich arbeite sowohl selbstständig als auch im Team sehr gut. Hier ist",
+    "description2": "was meine Kollegen über die Zusammenarbeit mit mir sagen.",
+    "partner": "Gruppen Mitglied",
+    "text1": "Michael hat das Team mit seiner großartigen Organisation und klaren Kommunikation wirklich zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
+    "text2": "Michi war ein hervorragender Teamkollege bei der DA. Sein positives Mitwirken und seine Bereitschaft, Verantwortung zu übernehmen, haben wesentlich dazu beigetragen, dass wir unsere Ziele erreichen konnten.",
+    "text3": "Es war mir eine große Freude, mit Michael zusammenzuarbeiten. Er versteht es, Teammitglieder zu motivieren und zu ermutigen, die bestmöglichen Ergebnisse zu erzielen, und bringt sich stets konstruktiv in Brainstormings ein. Was das Wohlbefinden der Gruppenmitglieder angeht, war er immer präsent und bereit, zuzuhören und anderen zu helfen, und das mit viel Humor."
+  },
+  "contact": {
+    "title": "Sag Hallo",
+    "secondaryTitle": "Möchten Sie ein neues Projekt besprechen?",
+    "description": "Sag Hallo! Lass uns deine Ideen besprechen und sie verwirklichen.",
+    "labelName": "Dein Name",
+    "labelNameError": "Bitte gib deinen Namen ein",
+    "labelEmail": "Deine E-Mail",
+    "labelEmailError": "Bitte gib deine E-Mail ein",
+    "labelMessage": "Deine Nachricht",
+    "labelMessageError": "Bitte gib deine Nachricht ein",
+    "labelPrivacyText1": "Ich habe die",
+    "labelPrivacyLink": "Datenschutzerklärung",
+    "labelPrivacyText2": "gelesen und stimme zu, dass meine Daten gemäß der in der Datenschutzerklärung genannten Art verarbeitet werden.",
+    "btnSubmit": "Senden",
+    "btnSubmitError": "Bitte akzeptieren Sie die Datenschutzerklärung."
+  },
+  "footer": { "title": "Rechtlicher Hinweis" }
 }

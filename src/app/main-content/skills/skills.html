@@ -1,6 +1,6 @@
 <section id="skills">
   <div>
-    <h2>My skills</h2>
+    <h2>{{ 'skills.title' | translate }}</h2>
     <div class="icons">
       <p><img src="assets/icons/Angular.svg" alt="" />Angular</p>
       <p><img src="assets/icons/TypeScript.svg" alt="" />TypeScript</p>
@@ -13,11 +13,17 @@
       <p><img src="assets/icons/Git.svg" alt="" />Git</p>
       <p><img src="assets/icons/Scrum.svg" alt="" />Scrum</p>
       <p><img src="assets/icons/REST-API.svg" alt="" />REST-API</p>
-      <p><img src="assets/icons/Material Design.svg" alt="" />Material<br>Design</p>
+      <p><img src="assets/icons/Material Design.svg" alt="" />Material<br />Design</p>
     </div>
     <div class="last-icon">
-        <img src="assets/icons/Continued_learning.svg" alt="">
-        <p>Don't see the skill you need? <a href="#contact"><button>Contact me</button></a> I'm always ready to learn!</p>
+      <img src="assets/icons/Continued_learning.svg" alt="" />
+      <p>
+        {{ 'skills.description' | translate }}
+        <a href="#contact"
+          ><button>{{ 'skills.contact' | translate }}</button></a
+        >
+        {{ 'skills.ready' | translate }}
+      </p>
     </div>
   </div>
 </section>

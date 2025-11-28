@@ -1,8 +1,8 @@
 <section id="contact" class="contact">
-  <h2>Say Hi!</h2>
+  <h2>{{ 'contact.title' | translate }}</h2>
   <div>
-    <h3>Want to discuss a new project</h3>
-    <p>Say hello! let's discuss your ideas and make it happen</p>
+    <h3>{{ 'contact.secondaryTitle' | translate }}</h3>
+    <p>{{ 'contact.description' | translate }}</p>
   </div>
 
   <div class="card_contact">
@@ -18,10 +18,10 @@
           placeholder=""
           required
         />
-        <label for="name">Your Name</label>
+        <label for="name">{{ 'contact.labelName' | translate }}</label>
         @if(!name.valid && name.touched) {
         <span class="error-icon">!</span>
-        <span class="error-message">Please enter your name</span>
+        <span class="error-message">{{ 'contact.labelNameError' | translate }}</span>
         } @if(name.valid && name.touched) {
         <span class="success-icon">✓</span>
         }
@@ -39,10 +39,10 @@
           required
           pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
         />
-        <label for="email">Your Email</label>
+        <label for="email">{{ 'contact.labelEmail' | translate }}</label>
         @if(!email.valid && email.touched) {
         <span class="error-icon">!</span>
-        <span class="error-message">Please enter your email</span>
+        <span class="error-message">{{ 'contact.labelEmailError' | translate }}</span>
         } @if(email.valid && email.touched) {
         <span class="success-icon">✓</span>
         }
@@ -60,10 +60,10 @@
           rows="10"
           required
         ></textarea>
-        <label for="message">Your Message</label>
+        <label for="message">{{ 'contact.labelMessage' | translate }}</label>
         @if(!message.valid && message.touched) {
         <span class="error-icon">!</span>
-        <span class="error-message">Please enter a message</span>
+        <span class="error-message">{{ 'contact.labelMessageError' | translate }}</span>
         } @if(message.valid && message.touched) {
         <span class="success-icon">✓</span>
         }
@@ -76,17 +76,17 @@
           #privacy="ngModel"
           required
         />
-        I've read the 
-        <a href="privacy-policy"><span>privacy policy</span></a>
-        and agree to the processing of my data as outlined.
-        @if(!privacy.valid && contactForm.submitted) {
-          <span class="error-message">Please accept the privacy policy</span>
+        {{ 'contact.labelPrivacyText1' | translate }}
+        <a href="privacy-policy"
+          ><span>{{ 'contact.labelPrivacyLink' | translate }}</span></a
+        >
+        {{ 'contact.labelPrivacyText2' | translate }} @if(!privacy.valid && contactForm.submitted) {
+        <span class="error-message">{{ 'contact.btnSubmitError' | translate }}</span>
         }
       </p>
 
       <div class="btn">
-        <input type="submit" value="Send Message" />
-        
+        <input type="submit" value="{{ 'contact.btnSubmit' | translate }}" />
       </div>
       <a href="#hero"><img class="arrow" src="assets/icons/arrow_up.svg" alt="" /></a>
     </form>

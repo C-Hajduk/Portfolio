@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
-import { ProjectsRight } from './projects-right/projects-right';
-import { ProjectsLeft } from './projects-left/projects-left';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [ProjectsRight, ProjectsLeft, CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.scss',
 })
 export class Portfolio {
+  private translate = inject(TranslateService);
+
   opacity = false;
 
   projects = [
@@ -19,8 +20,7 @@ export class Portfolio {
       number: '01/04',
       image: 'assets/img/Pokedex_color.png',
       tech: 'JavaScript | HTML | CSS | API',
-      description:
-        'Based on the PokeAPI, a simple library that provides and catalogues Pokémon information.',
+      descriptionKey: 'portfolio.project1.description',
       github: 'https://github.com/...',
     },
     {
@@ -29,7 +29,7 @@ export class Portfolio {
       number: '02/04',
       image: 'assets/img/El_Pollo_Locco_color.png',
       tech: 'JavaScript | HTML | CSS',
-      description: 'A simple jump-and-run game based on an object-oriented approach.',
+      descriptionKey: 'portfolio.project2.description',
       github: 'https://github.com/...',
     },
     {
@@ -38,8 +38,7 @@ export class Portfolio {
       number: '03/04',
       image: 'assets/img/Pokedex_color.png',
       tech: 'Angular | TypeScript | HTML | CSS | Firebase',
-      description:
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
+      descriptionKey: 'portfolio.project3.description',
       github: 'https://github.com/...',
     },
   ];
