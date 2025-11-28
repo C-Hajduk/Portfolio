@@ -13,6 +13,10 @@ export class Portfolio {
 
   opacity = false;
 
+  openGithub(url: string) {
+    window.open(url, '_blank');
+  }
+
   projects = [
     {
       title: 'Pokédex',
@@ -21,7 +25,7 @@ export class Portfolio {
       image: 'assets/img/Pokedex_color.png',
       tech: 'JavaScript | HTML | CSS | API',
       descriptionKey: 'portfolio.project1.description',
-      github: 'https://github.com/...',
+      github: 'https://github.com/C-Hajduk/Pokedex.git',
     },
     {
       title: 'El Pollo Loco',
@@ -30,7 +34,7 @@ export class Portfolio {
       image: 'assets/img/El_Pollo_Locco_color.png',
       tech: 'JavaScript | HTML | CSS',
       descriptionKey: 'portfolio.project2.description',
-      github: 'https://github.com/...',
+      github: 'https://github.com/C-Hajduk/El-Pollo-Loco.git',
     },
     {
       title: 'Join',
@@ -39,7 +43,7 @@ export class Portfolio {
       image: 'assets/img/Pokedex_color.png',
       tech: 'Angular | TypeScript | HTML | CSS | Firebase',
       descriptionKey: 'portfolio.project3.description',
-      github: 'https://github.com/...',
+      github: 'https://github.com/C-Hajduk/Join.git',
     },
   ];
 }

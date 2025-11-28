@@ -52,7 +52,7 @@ section {
     z-index: 2;
     opacity: 0;
     background: none;
-    transition: transform 0.4s ease , opacity 0.4s ease;
+    transition: transform 0.4s ease, opacity 0.4s ease;
   }
 
   &::before {
@@ -125,11 +125,10 @@ section {
   opacity: 0;
   transform: translateX(-200px);
   transition: opacity 0.5s ease, transform 0.5s ease;
-  &.right{
+  &.right {
     align-items: start;
     transform: translateX(200px);
     margin-left: -25px;
-
   }
   > p:nth-child(1) {
     @include text-style($family: 'Syne', $size: 45px, $weight: 800);
@@ -146,5 +145,11 @@ section {
     @include borderStyling();
     width: 189px;
     height: 68px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: rgba(0, 188, 143, 1);
+      color: white;
+    }
   }
 }

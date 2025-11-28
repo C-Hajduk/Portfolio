@@ -19,7 +19,7 @@
         <p>{{ project.title }}</p>
         <p>{{ project.tech }}</p>
         <p>{{ project.descriptionKey | translate }}</p>
-        <button>Github</button>
+        <button (click)="openGithub(project.github)">Github</button>
       </div>
     </div>
   </div>
