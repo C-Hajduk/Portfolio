@@ -19,7 +19,6 @@ export class HamMenu {
   activeIndex: number | null = null;
 
   constructor() {
-    // Set offset to account for fixed header (120px from styles.scss)
     this.viewportScroller.setOffset([0, 125]);
   }
 
