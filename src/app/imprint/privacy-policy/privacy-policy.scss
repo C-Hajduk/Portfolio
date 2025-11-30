@@ -6,22 +6,74 @@
 }
 
 section {
+  max-width: 1400px;
   margin: 0px 100px;
   > h2 {
     margin-top: 50px;
   }
 }
 
-.segments {
-  margin-top: 50px;
-  margin-bottom: 30px;
+.segments_header {
+  margin: 70px 0px 30px;
+  > h4 {
+    margin-bottom: 20px;
+  }
+  > h5 {
+    margin: 20px 0 10px;
+  }
+  > ul {
+    li {
+      font-size: 16px;
+      font-family: 'Overpass';
+    }
+  }
   > p {
-    margin-top: 10px;
     font-size: 16px;
     font-family: 'Overpass';
   }
 }
 
+.segments {
+  margin-bottom: 30px;
+  > h5 {
+    margin: 20px 0 10px;
+  }
+  > ul {
+    li {
+      font-size: 16px;
+      font-family: 'Overpass';
+    }
+  }
+  > p {
+    font-size: 16px;
+    font-family: 'Overpass';
+    > span {
+      color: rgba(0, 188, 143, 1);
+    }
+    > strong {
+      color: rgba(0, 188, 143, 1);
+    }
+    > a {
+      color: rgba(0, 188, 143, 1);
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.heel {
+  content: '';
+  padding: 50px 0px;
+}
+
 app-footer {
   margin-top: auto;
+}
+
+@media (min-width: 1400px) {
+  section {
+    margin: 0px auto;
+  }
 }
