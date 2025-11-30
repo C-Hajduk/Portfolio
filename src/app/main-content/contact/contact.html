@@ -77,7 +77,7 @@
           required
         />
         {{ 'contact.labelPrivacyText1' | translate }}
-        <a href="privacy-policy"
+        <a routerLink="/privacy-policy"
           ><span>{{ 'contact.labelPrivacyLink' | translate }}</span></a
         >
         {{ 'contact.labelPrivacyText2' | translate }} @if(!privacy.valid && contactForm.submitted) {
