@@ -12,20 +12,20 @@
 h1 {
   font-family: 'Syne';
   font-weight: 800;
-  font-size: 128px;
+  font-size: clamp(48px, 8vw + 20px, 128px);
 }
 
 h2 {
   font-family: 'Syne';
   font-weight: 800;
-  font-size: 78px;
+  font-size: clamp(32px, 5vw + 20px, 78px);
   &:hover {
     color: rgba(0, 188, 143, 1);
   }
 }
 
 h4 {
-  font-size: 24px;
+  font-size: clamp(18px, 1.5vw + 14px, 24px);
   font-family: 'Overpass';
   font-weight: 800;
   font-weight: bold;
@@ -33,7 +33,7 @@ h4 {
 }
 
 h5 {
-  font-size: 19px;
+  font-size: clamp(16px, 1vw + 14px, 19px);
   font-family: 'Overpass';
   font-weight: 700;
   color: rgba(0, 188, 143, 1);
@@ -133,14 +133,3 @@ select:-webkit-autofill:focus {
   font-weight: 700;
   src: url('../public/assets/fonts/overpass-v19-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-
-
-/* @media (min-width: 1440px) {
-  body {
-    max-width: 1440px;
-    margin: 0 auto;
-    width: 100%;
-    padding: 0 20px;
-  }
-} */
