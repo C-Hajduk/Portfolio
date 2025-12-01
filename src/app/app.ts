@@ -3,10 +3,9 @@ import { RouterOutlet } from '@angular/router';
 import { Footer } from './shared/footer/footer';
 import { Header } from './shared/header/header';
 import { HamMenu } from './imprint/ham-menu/ham-menu';
-import { TranslatePipe } from '@ngx-translate/core';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Footer, Header, HamMenu, TranslatePipe],
+  imports: [RouterOutlet, Footer, Header, HamMenu],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

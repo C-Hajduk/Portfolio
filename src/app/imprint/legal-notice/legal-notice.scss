@@ -6,32 +6,47 @@
 }
 
 section {
+  @include spacing(margin, 20px, 50px, 100px auto);
+  @include spacing(padding, 0px 20px, 0px 50px, 0px 100px);
   max-width: 1400px;
-  margin: 0px 100px;
   > h2 {
-    margin-top: 50px;
+    @include spacing(margin-top, 30px, 40px, 50px);
+    @include text-style-responsive(24px, 28px, 32px, 'Overpass', 700);
   }
 }
 
 .segments_header {
-  margin: 70px 0px 30px;
+  @include spacing(margin, 40px 0px 20px, 50px 0px 25px, 70px 0px 30px);
   > ul {
+    @include spacing(padding-left, 20px, 25px, 30px);
     li {
-      font-size: 16px;
-      font-family: 'Overpass';
+      @include text-style-responsive(14px, 15px, 16px, 'Overpass');
+      line-height: 1.6;
+
+      @include respond($break-md) {
+        line-height: 1.8;
+      }
     }
   }
   > p {
-    font-size: 16px;
-    font-family: 'Overpass';
+    @include text-style-responsive(14px, 15px, 16px, 'Overpass');
+    line-height: 1.6;
+
+    @include respond($break-md) {
+      line-height: 1.8;
+    }
   }
 }
 
 .segments {
-  margin-bottom: 30px;
+  @include spacing(margin-bottom, 20px, 25px, 30px);
   > p {
-    font-size: 16px;
-    font-family: 'Overpass';
+    @include text-style-responsive(14px, 15px, 16px, 'Overpass');
+    line-height: 1.6;
+
+    @include respond($break-md) {
+      line-height: 1.8;
+    }
     > span {
       color: rgba(0, 188, 143, 1);
     }
@@ -40,5 +55,5 @@ section {
 
 .heel {
   content: '';
-  padding: 50px 0px;
+  @include spacing(padding, 30px 0px, 40px 0px, 50px 0px);
 }

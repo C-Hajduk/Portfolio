@@ -51,23 +51,22 @@ section {
   > p {
     align-self: flex-end;
     > a {
-        background-color: black;
-        color: rgb(255, 252, 243);
-        @include text-style($size: 16px);
-        border: none;
-        cursor: pointer;
-        transition: background-size 0.25s ease;
-        background-size: 0% 2px;
-        text-decoration: none;
-        &:hover {
-          color: rgba(0, 188, 143, 1);
-          font-weight: bold;
-          background-image: linear-gradient(currentColor);
-          background-position: center bottom;
-          background-repeat: no-repeat;
-          background-size: 90% 2px;
-        }
-      
+      background-color: black;
+      color: rgb(255, 252, 243);
+      @include text-style($size: 16px);
+      border: none;
+      cursor: pointer;
+      transition: background-size 0.25s ease;
+      background-size: 0% 2px;
+      text-decoration: none;
+      &:hover {
+        color: rgba(0, 188, 143, 1);
+        font-weight: bold;
+        background-image: linear-gradient(currentColor);
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: 90% 2px;
+      }
     }
   }
 }
