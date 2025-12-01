@@ -18,7 +18,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $name = $params->name;
             $message = $params->message;
     
-            $recipient = 'mail@christianhajduk.de';  
+            $recipient = 'christian.hajduk@outlook.de';
             $subject = "Contact From <$email>";
             $message = "From:" . $name . "<br>" . $message ;
     

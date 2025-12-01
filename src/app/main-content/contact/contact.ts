@@ -23,7 +23,7 @@ export class Contact {
     privacy: false,
   };
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://christianhajduk.de/sendMail.php',
@@ -38,6 +38,7 @@ export class Contact {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.valid && !this.mailTest) {
+      console.log(this.contactData);
       this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
         next: (response) => {
           ngForm.resetForm();
