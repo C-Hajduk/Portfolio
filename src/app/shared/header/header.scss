@@ -4,16 +4,16 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 100px;
-  height: 100px;
+  @include spacing(padding, 0px 20px, 0px 50px, 0px 100px);
+  @include spacing(height, 80px, 90px, 100px);
   position: sticky;
   z-index: 11;
   top: 0;
   > a {
     cursor: default;
     > img {
-      width: 60px;
-      height: 60px;
+      @include spacing(width, 50px, 55px, 60px);
+      @include spacing(height, 50px, 55px, 60px);
     }
   }
 }
@@ -21,15 +21,19 @@ section {
 .wrapper {
   display: flex;
   align-items: center;
-  gap: 100px;
+  @include spacing(gap, 30px, 60px, 100px);
 }
 
 .language_tuggle {
-  display: flex;
-  gap: 20px;
+  display: none; // Auf Mobile versteckt
+  @include spacing(gap, 15px, 18px, 20px);
+
+  @include respond($break-md) {
+    display: flex; // Ab Tablet sichtbar
+  }
 
   > button {
-    @include text-style($family: 'Syne', $size: 16px, $weight: 700);
+    @include text-style-responsive(14px, 15px, 16px, 'Syne', 700);
     cursor: pointer;
     border: none;
     background: none;
@@ -54,8 +58,8 @@ section {
 }
 
 .hamburger {
-  width: 60px;
-  height: 60px;
+  @include spacing(width, 50px, 55px, 60px);
+  @include spacing(height, 50px, 55px, 60px);
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../../../../public/assets/icons/burger1.svg);

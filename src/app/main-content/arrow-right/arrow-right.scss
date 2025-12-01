@@ -1,9 +1,13 @@
+@import './../../../styles.scss';
+
 section {
-  margin: 0px 100px;
+  @include spacing(margin, 0px auto, 0px auto, 0px auto);
+  @include spacing(padding, 0px 20px, 0px 50px, 0px 100px);
+  max-width: 1440px;
   display: flex;
-  justify-content: end;
-  align-items: start;
-  height: 300px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 350px;
   overflow-y: hidden;
 }
 
@@ -22,5 +26,33 @@ section:hover {
   }
   to {
     transform: translate(-60px, 60px);
+  }
+}
+
+@include respond-max($break-md) {
+  section {
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    > .arrow {
+      > img {
+        height: 200px;
+        width: auto;
+      }
+    }
+  }
+}
+
+@include respond-max($break-sm) {
+  section {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    > .arrow {
+      > img {
+        height: 150px;
+        width: auto;
+      }
+    }
   }
 }
