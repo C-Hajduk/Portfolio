@@ -1,9 +1,10 @@
-@import './../../../styles.scss';
+@use '../../../styles/mixin.scss' as *;
 
 section {
   display: flex;
   flex-direction: column;
-  @include spacing(margin, 20px, 50px, 100px);
+  max-width: 1440px;
+  margin: 100px auto 200px;
 
   > h1 {
     display: flex;

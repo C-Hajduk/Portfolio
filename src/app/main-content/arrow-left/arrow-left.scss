@@ -1,10 +1,12 @@
+@use '../../../styles/mixin.scss' as *;
+
 section {
-  margin: 0px 100px;
+  max-width: 1440px;
+  margin: 0px auto 100px;
   display: flex;
   justify-content: start;
   align-items: start;
-  height: 300px;
-  overflow-y: hidden;
+  height: 250px;
 }
 
 section:hover {
@@ -22,5 +24,33 @@ section:hover {
   }
   to {
     transform: translate(60px, 60px);
+  }
+}
+
+@include respond-max($break-md) {
+  section {
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    > .arrow {
+      > img {
+        height: 200px;
+        width: auto;
+      }
+    }
+  }
+}
+
+@include respond-max($break-sm) {
+  section {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    > .arrow {
+      > img {
+        height: 150px;
+        width: auto;
+      }
+    }
   }
 }

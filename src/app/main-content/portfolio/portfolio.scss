@@ -1,10 +1,11 @@
-@import './../../../styles.scss';
+@use '../../../styles/mixin.scss' as *;
 
 section {
   display: flex;
+  max-width: 1440px;
+  margin: 0px auto 200px;
   flex-direction: column;
   align-items: flex-start;
-  margin: 100px 100px;
 }
 
 .card_header {
@@ -33,10 +34,22 @@ section {
   position: relative;
   &.right {
     flex-direction: row-reverse;
+    > img:nth-child(2) {
+      right: 50%;
+    }
+    &:hover {
+      > img:nth-child(2) {
+        transform: scale(2.5) rotate(125deg);
+      }
+    }
   }
 
   > img {
-    width: 700px;
+    &:first-of-type {
+      flex: 0 0 50%;
+      max-width: 50%;
+      // aspect-ratio: 3 / 2;
+    }
     height: 400px;
     position: relative;
     -webkit-filter: grayscale(100%);
@@ -45,10 +58,11 @@ section {
   }
 
   > img:nth-child(2) {
-    position: relative;
+    position: absolute;
     width: 50px;
     height: 50px;
     top: 175px;
+    right: calc(50% - 45px);
     z-index: 2;
     opacity: 0;
     background: none;
@@ -67,6 +81,7 @@ section {
     transition: 0.1s ease;
     z-index: 1;
     width: 700px;
+    box-sizing: border-box;
   }
 
   &:hover::before {
@@ -88,10 +103,11 @@ section {
     transform: scale(2.5) rotate(-125deg);
   }
 }
+
 .card_portfolio:hover .card_info {
   /* Zielzustand: sichtbar & an Ort */
   opacity: 1;
-  transform: translateX(50px);
+  transform: translateX(0px);
 }
 
 .card_portfolio.right::before {
@@ -100,7 +116,8 @@ section {
 }
 
 .card_wrapper {
-  width: 100%;
+    flex: 0 0 40%;
+    max-width: 40%;
 }
 
 .card_number {
@@ -119,7 +136,7 @@ section {
 .card_info {
   display: flex;
   flex-direction: column;
-  margin-left: 25px;
+  // margin-left: 25px;
   gap: 25px;
   width: 100%;
   opacity: 0;
@@ -128,7 +145,6 @@ section {
   &.right {
     align-items: start;
     transform: translateX(200px);
-    margin-left: -25px;
   }
   > p:nth-child(1) {
     @include text-style($family: 'Syne', $size: 45px, $weight: 800);

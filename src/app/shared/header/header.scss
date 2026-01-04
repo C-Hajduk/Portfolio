@@ -1,14 +1,21 @@
-@import './../../../styles.scss';
+@use '../../../styles/mixin.scss' as *;
 
 section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @include spacing(padding, 0px 20px, 0px 50px, 0px 100px);
-  @include spacing(height, 80px, 90px, 100px);
   position: sticky;
   z-index: 11;
   top: 0;
+  @include spacing(height, 80px, 90px, 100px);
+  @include spacing(padding, 20px 0, 20px 0, 20px 0);
+}
+
+.hero-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  @include spacing(padding, 0 20px, 0 20px, 0 20px);
+
   > a {
     cursor: default;
     > img {

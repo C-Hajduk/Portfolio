@@ -1,4 +1,4 @@
-@import './../../../styles.scss';
+@use '../../../styles/mixin.scss' as *;
 
 * {
   margin: 0;

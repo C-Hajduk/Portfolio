@@ -21,7 +21,7 @@ export class Portfolio {
     {
       title: 'Pokédex',
       direction: 'left',
-      number: '01/04',
+      number: '01/03',
       image: 'assets/img/Pokedex_color.png',
       tech: 'JavaScript | HTML | CSS | API',
       descriptionKey: 'portfolio.project1.description',
@@ -30,7 +30,7 @@ export class Portfolio {
     {
       title: 'El Pollo Loco',
       direction: 'right',
-      number: '02/04',
+      number: '02/03',
       image: 'assets/img/El_Pollo_Locco_color.png',
       tech: 'JavaScript | HTML | CSS',
       descriptionKey: 'portfolio.project2.description',
@@ -39,8 +39,8 @@ export class Portfolio {
     {
       title: 'Join',
       direction: 'left',
-      number: '03/04',
-      image: 'assets/img/Pokedex_color.png',
+      number: '03/03',
+      image: 'assets/img/Join.png',
       tech: 'Angular | TypeScript | HTML | CSS | Firebase',
       descriptionKey: 'portfolio.project3.description',
       github: 'https://github.com/C-Hajduk/Join.git',
