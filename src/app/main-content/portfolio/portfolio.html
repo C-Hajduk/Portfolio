@@ -6,10 +6,15 @@
 
   <!-- single projects -->
   @for(project of projects; track project.title){
-  <div class="card_portfolio" [ngClass]="project.direction">
-    <img src="{{ project.image }}" alt="" />
-    <img src="assets/icons/arrow-portfolio.svg" alt="" />
-
+  <div
+    class="card_portfolio"
+    [ngClass]="project.direction"
+    [class.is-featured]="project.isFeatured"
+  >
+    <div class="card_image">
+      <img src="{{ project.image }}" alt="" />
+      <img src="assets/icons/arrow-portfolio.svg" alt="" />
+    </div>
     <div class="card_wrapper">
       <div class="card_number" [ngClass]="project.direction">
         <p>{{ project.number }}</p>

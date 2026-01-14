@@ -26,6 +26,7 @@ export class Portfolio {
       tech: 'JavaScript | HTML | CSS | API',
       descriptionKey: 'portfolio.project1.description',
       github: 'https://github.com/C-Hajduk/Pokedex.git',
+      isFeatured: false,
     },
     {
       title: 'El Pollo Loco',
@@ -35,6 +36,7 @@ export class Portfolio {
       tech: 'JavaScript | HTML | CSS',
       descriptionKey: 'portfolio.project2.description',
       github: 'https://github.com/C-Hajduk/El-Pollo-Loco.git',
+      isFeatured: false,
     },
     {
       title: 'Join',
@@ -44,6 +46,7 @@ export class Portfolio {
       tech: 'Angular | TypeScript | HTML | CSS | Firebase',
       descriptionKey: 'portfolio.project3.description',
       github: 'https://github.com/C-Hajduk/Join.git',
+      isFeatured: true,
     },
   ];
 }
