@@ -1,5 +1,5 @@
 div {
-  padding: 0 20px;
+  padding: clamp(20px, 5vw, 100px);
   max-width: 1440px;
   margin: 0 auto;
 }

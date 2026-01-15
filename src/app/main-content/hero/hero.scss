@@ -11,7 +11,9 @@ section {
     align-items: center;
     text-align: center;
     justify-content: center;
-    @include text-style-responsive(45px, 60px, 128px, 'Syne', 800);
+    font-size: clamp(32px, 9vw, 128px);
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
     line-height: 1.1;
   }
   > div:first-of-type {
