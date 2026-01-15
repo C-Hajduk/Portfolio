@@ -20,16 +20,7 @@ h1 {
 h2 {
   font-family: 'Syne';
   font-weight: 800;
-  font-size: clamp(32px, 5vw + 20px, 78px);
-  @include respond($break-lg) {
-    font-size: 78px;
-  }
-  @include respond-max($break-md) {
-    font-size: calc(5vw + 20px);
-  }
-  @include respond-max($break-xs) {
-    font-size: 28px;
-  }
+  font-size: clamp(28px, 7vw, 78px);
   &:hover {
     color: rgba(0, 188, 143, 1);
   }
