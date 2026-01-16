@@ -16,6 +16,7 @@ section {
   flex-direction: column;
   align-items: center;
   position: relative;
+  @include spacing(margin-top, 100px, 50px, 25px);
 
   > div {
     position: relative;
@@ -67,10 +68,6 @@ section {
   &::after {
     opacity: 0 !important;
   }
-}
-
-app-footer {
-  margin-top: auto;
 }
 
 @keyframes line-shrink {
