@@ -11,9 +11,11 @@ section {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  padding: clamp(20px, 7.2vw, 100px);
 
   > h2 {
     font-size: clamp(45px, 7vw, 78px);
+    white-space: nowrap;
     @include spacing(
       margin,
       50px 10px 30px 10px,
