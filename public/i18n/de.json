@@ -49,7 +49,8 @@
     "labelPrivacyText1": "Ich habe die",
     "labelPrivacyLink": "Datenschutzerklärung",
     "labelPrivacyText2": "gelesen und stimme zu, dass meine Daten gemäß der in der Datenschutzerklärung genannten Art verarbeitet werden.",
-    "btnSubmit": "Senden",
+    "btnSubmit-desktop": "Senden",
+    "btnSubmit-mobile": "Sag hallo ;)",
     "btnSubmitError": "Bitte akzeptieren Sie die Datenschutzerklärung."
   },
   "footer": { "title": "Rechtlicher Hinweis" }
