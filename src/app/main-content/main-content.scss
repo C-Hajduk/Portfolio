@@ -1,5 +1,8 @@
 div {
-  padding: clamp(20px, 7.2vw, 100px);
+  padding-top: clamp(20px, 7.2vw, 100px);
+  padding-right: clamp(20px, 7.2vw, 100px);
+  padding-bottom: 0;
+  padding-left: clamp(20px, 7.2vw, 100px);
   max-width: 1440px;
   margin: 0 auto;
 }
