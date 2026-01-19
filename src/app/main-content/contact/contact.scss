@@ -1,18 +1,29 @@
 @use '../../../styles/mixin.scss' as *;
 
 section {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // position: relative;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
   background-image: url(./../../../../public/assets/img/Rectangle5.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: clamp(20px, 7.2vw, 100px);
-  margin-bottom: -3px;
+  // width: 100%;
+  // max-width: 1440px;
+  
+}
+
+.contact_wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: clamp(20px, 7.2vw, 100px);
+    margin-bottom: -3px;
+  
 
   > h2 {
     font-size: clamp(45px, 7vw, 78px);

@@ -1,13 +1,16 @@
 @use '../../../styles/mixin.scss' as *;
 
 section {
+  background-color: black;
+}
+
+.footer_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 1440px;
   margin: 0 auto;
   padding: clamp(20px, 7.2vw, 100px);
-  background-color: black;
   @include respond-max($break-md) {
     flex-direction: column;
     padding-bottom: 60px;

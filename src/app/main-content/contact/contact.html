@@ -1,97 +1,103 @@
 <section id="contact" class="contact">
-  <h2>{{ 'contact.title' | translate }}</h2>
-  <div>
-    <h3>{{ 'contact.secondaryTitle' | translate }}</h3>
-    <p>{{ 'contact.description' | translate }}</p>
-  </div>
+  <div class="contact_wrapper">
+    <h2>{{ 'contact.title' | translate }}</h2>
+    <div>
+      <h3>{{ 'contact.secondaryTitle' | translate }}</h3>
+      <p>{{ 'contact.description' | translate }}</p>
+    </div>
 
-  <div class="card_contact">
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-      <!-- Name-Feld -->
-      <div class="input-group">
-        <input
-          #name="ngModel"
-          [(ngModel)]="contactData.name"
-          type="text"
-          name="name"
-          minlength="4"
-          placeholder=""
-          required
-        />
-        <label for="name">{{ 'contact.labelName' | translate }}</label>
-        @if(!name.valid && name.touched) {
-        <span class="error-icon">!</span>
-        <span class="error-message">{{ 'contact.labelNameError' | translate }}</span>
-        } @if(name.valid && name.touched) {
-        <span class="success-icon">✓</span>
-        }
-      </div>
+    <div class="card_contact">
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <!-- Name-Feld -->
+        <div class="input-group">
+          <input
+            #name="ngModel"
+            [(ngModel)]="contactData.name"
+            type="text"
+            name="name"
+            minlength="4"
+            placeholder=""
+            required
+          />
+          <label for="name">{{ 'contact.labelName' | translate }}</label>
+          @if (!name.valid && name.touched) {
+            <span class="error-icon">!</span>
+            <span class="error-message">{{ 'contact.labelNameError' | translate }}</span>
+          }
+          @if (name.valid && name.touched) {
+            <span class="success-icon">✓</span>
+          }
+        </div>
 
-      <!-- E-Mail-Feld -->
-      <div class="input-group">
-        <input
-          #email="ngModel"
-          [(ngModel)]="contactData.email"
-          type="email"
-          name="email"
-          minlength="4"
-          placeholder=""
-          required
-          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-        />
-        <label for="email">{{ 'contact.labelEmail' | translate }}</label>
-        @if(!email.valid && email.touched) {
-        <span class="error-icon">!</span>
-        <span class="error-message">{{ 'contact.labelEmailError' | translate }}</span>
-        } @if(email.valid && email.touched) {
-        <span class="success-icon">✓</span>
-        }
-      </div>
+        <!-- E-Mail-Feld -->
+        <div class="input-group">
+          <input
+            #email="ngModel"
+            [(ngModel)]="contactData.email"
+            type="email"
+            name="email"
+            minlength="4"
+            placeholder=""
+            required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          />
+          <label for="email">{{ 'contact.labelEmail' | translate }}</label>
+          @if (!email.valid && email.touched) {
+            <span class="error-icon">!</span>
+            <span class="error-message">{{ 'contact.labelEmailError' | translate }}</span>
+          }
+          @if (email.valid && email.touched) {
+            <span class="success-icon">✓</span>
+          }
+        </div>
 
-      <!-- Nachrichten-Feld -->
-      <div class="input-group">
-        <textarea
-          #message="ngModel"
-          [(ngModel)]="contactData.message"
-          name="message"
-          id="message"
-          minlength="4"
-          placeholder=""
-          rows="10"
-          required
-        ></textarea>
-        <label for="message">{{ 'contact.labelMessage' | translate }}</label>
-        @if(!message.valid && message.touched) {
-        <span class="error-icon">!</span>
-        <span class="error-message">{{ 'contact.labelMessageError' | translate }}</span>
-        } @if(message.valid && message.touched) {
-        <span class="success-icon">✓</span>
-        }
-      </div>
-      <p class="checkbox">
-        <input
-          type="checkbox"
-          name="privacy"
-          [(ngModel)]="contactData.privacy"
-          #privacy="ngModel"
-          required
-        />
-        {{ 'contact.labelPrivacyText1' | translate }}
-        <a routerLink="/privacy-policy"
-          ><span>{{ 'contact.labelPrivacyLink' | translate }}</span></a
-        >
-        {{ 'contact.labelPrivacyText2' | translate }} @if(!privacy.valid && contactForm.submitted) {
-        <span class="error-message">{{ 'contact.btnSubmitError' | translate }}</span>
-        }
-      </p>
+        <!-- Nachrichten-Feld -->
+        <div class="input-group">
+          <textarea
+            #message="ngModel"
+            [(ngModel)]="contactData.message"
+            name="message"
+            id="message"
+            minlength="4"
+            placeholder=""
+            rows="10"
+            required
+          ></textarea>
+          <label for="message">{{ 'contact.labelMessage' | translate }}</label>
+          @if (!message.valid && message.touched) {
+            <span class="error-icon">!</span>
+            <span class="error-message">{{ 'contact.labelMessageError' | translate }}</span>
+          }
+          @if (message.valid && message.touched) {
+            <span class="success-icon">✓</span>
+          }
+        </div>
+        <p class="checkbox">
+          <input
+            type="checkbox"
+            name="privacy"
+            [(ngModel)]="contactData.privacy"
+            #privacy="ngModel"
+            required
+          />
+          {{ 'contact.labelPrivacyText1' | translate }}
+          <a routerLink="/privacy-policy"
+            ><span>{{ 'contact.labelPrivacyLink' | translate }}</span></a
+          >
+          {{ 'contact.labelPrivacyText2' | translate }}
+          @if (!privacy.valid && contactForm.submitted) {
+            <span class="error-message">{{ 'contact.btnSubmitError' | translate }}</span>
+          }
+        </p>
 
-      <div class="btn-desktop">
-        <input type="submit" value="{{ 'contact.btnSubmit-desktop' | translate }}" />
-      </div>
-      <div class="btn-mobile">
-        <input type="submit" value="{{ 'contact.btnSubmit-mobile' | translate }}" />
-      </div>
-      <a href="#hero"><img class="arrow" src="assets/icons/arrow_up.svg" alt="" /></a>
-    </form>
+        <div class="btn-desktop">
+          <input type="submit" value="{{ 'contact.btnSubmit-desktop' | translate }}" />
+        </div>
+        <div class="btn-mobile">
+          <input type="submit" value="{{ 'contact.btnSubmit-mobile' | translate }}" />
+        </div>
+        <a href="#hero"><img class="arrow" src="assets/icons/arrow_up.svg" alt="" /></a>
+      </form>
+    </div>
   </div>
 </section>
