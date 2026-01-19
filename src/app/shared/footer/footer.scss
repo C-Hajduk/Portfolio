@@ -58,13 +58,17 @@ section {
     display: flex;
     gap: 60px;
     background-color: black;
-    > img {
+    > a {
+      display: inline-block;
       background-color: black;
-      width: 40px;
-      height: 40px;
       &:hover {
         animation: bounce 1s ease-out forwards;
       }
+    }
+    img {
+      background-color: black;
+      width: 40px;
+      height: 40px;
     }
   }
   > p {

@@ -108,6 +108,12 @@ footer {
     justify-content: center;
     align-items: flex-end;
     gap: 60px;
+    a {
+      display: inline-block;
+      &:hover {
+        animation: bounce 1s ease-out forwards;
+      }
+    }
     img {
       background-color: black;
       width: 30px;
@@ -127,5 +133,23 @@ footer {
   }
   100% {
     transform: scaleX(0.3); // auf 30% geschrumpft
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
