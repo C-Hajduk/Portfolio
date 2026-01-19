@@ -3,8 +3,12 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  background-color: rgb(255, 252, 243);
   scroll-behavior: smooth;
+  // outline: 1px solid red;
+}
+
+body {
+  background-color: rgb(255, 252, 243);
 }
 
 [id] {
