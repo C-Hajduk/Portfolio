@@ -1,32 +1,50 @@
 @if (burgermenu.isOpen) {
-<section class="layout">
-  <app-header></app-header>
-  <div class="skipp">
-    <div
-      [class]="{ showBorder: activeIndex === 0 }"
-      (mousedown)="openborder(0)"
-      (mouseup)="hideBorder()"
-    >
-      <div class="hover-div"></div>
-      <p (click)="navigateTo('about-me')">About me</p>
+  <section class="layout">
+    <app-header></app-header>
+    <div class="skipp">
+      <div
+        [class]="{ showBorder: activeIndex === 0 }"
+        (mousedown)="openborder(0)"
+        (mouseup)="hideBorder()"
+      >
+        <div class="hover-div"></div>
+        <p (click)="navigateTo('about-me')">About me</p>
+      </div>
+      <div
+        [class]="{ showBorder: activeIndex === 1 }"
+        (mousedown)="openborder(1)"
+        (mouseup)="hideBorder()"
+      >
+        <div class="hover-div"></div>
+        <p (click)="navigateTo('skills')">My Skills</p>
+      </div>
+      <div
+        [class]="{ showBorder: activeIndex === 2 }"
+        (mousedown)="openborder(2)"
+        (mouseup)="hideBorder()"
+      >
+        <div class="hover-div"></div>
+        <p (click)="navigateTo('portfolio')">Portfolio</p>
+      </div>
     </div>
-    <div
-      [class]="{ showBorder: activeIndex === 1 }"
-      (mousedown)="openborder(1)"
-      (mouseup)="hideBorder()"
-    >
-      <div class="hover-div"></div>
-      <p (click)="navigateTo('skills')">My Skills</p>
-    </div>
-    <div
-      [class]="{ showBorder: activeIndex === 2 }"
-      (mousedown)="openborder(2)"
-      (mouseup)="hideBorder()"
-    >
-      <div class="hover-div"></div>
-      <p (click)="navigateTo('portfolio')">Portfolio</p>
-    </div>
-  </div>
-  <!-- <app-footer></app-footer> -->
-</section>
+    <footer>
+      <div class="contact">
+
+        <div class="contact_wrapper">
+
+          <div class="contact_text">
+            <h2>Say Hi!</h2>
+            <p>christian.hajduk@outlook.de</p>
+          </div>
+
+          <div class="socials">
+            <img src="/assets/icons/Github_button.svg" alt="Github" />
+            <img src="/assets/icons/Email_button.svg" alt="Email" />
+            <img src="/assets/icons/Linkedin_button.svg" alt="Linkedin" />
+          </div>
+
+        </div>
+      </div>
+    </footer>
+  </section>
 }
