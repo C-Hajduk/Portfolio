@@ -30,6 +30,9 @@ section {
     @include respond($break-lg) {
       text-align: left;
     }
+    @include respond-max(1024px) {
+      animation: colorChange 4s infinite;
+    }
   }
 
   > p {
@@ -116,9 +119,33 @@ section {
     z-index: 2;
     @include spacing(top, 15px, 15px, 15px);
     @include spacing(left, 15px, 15px, 15px);
+    @include respond-max(1024px) {
+      animation: showBorder 2s alternate infinite;
+    }
   }
 
   &:hover::before {
+    opacity: 1;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: black;
+  }
+  50% {
+    color: rgb(0, 188, 143);
+  }
+  100% {
+    color: black;
+  }
+}
+
+@keyframes showBorder {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }

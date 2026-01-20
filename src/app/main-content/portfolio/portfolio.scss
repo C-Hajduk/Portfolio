@@ -16,6 +16,9 @@ section {
   margin-bottom: 100px;
   > h2 {
     margin-bottom: 20px;
+    @include respond-max(1024px) {
+      animation: colorChange 4s infinite;
+    }
   }
   > p {
     @include text-style($size: 22px);
@@ -330,6 +333,32 @@ section {
     margin-bottom: 100px;
   }
   .card_portfolio {
+    padding-left: 20px;
+    padding-right: 20px;
+    &:hover {
+      .card_image > img:last-of-type {
+        transform: scale(1) rotate(0deg);
+      }
+    }
+
+    &.right {
+      &:hover {
+        .card_image > img:last-of-type {
+          transform: scale(1) rotate(0deg);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  section {
+    margin-bottom: 50px;
+  }
+
+  .card_portfolio {
+    padding-left: 15px;
+    padding-right: 15px;
     &:hover {
       .card_image > img:last-of-type {
         transform: scale(0.7) rotate(0deg);
@@ -346,24 +375,14 @@ section {
   }
 }
 
-@media (max-width: 375px) {
-  section {
-    margin-bottom: 50px;
+@keyframes colorChange {
+  0% {
+    color: black;
   }
-
-  .card_portfolio {
-    &:hover {
-      .card_image > img:last-of-type {
-        transform: scale(0.5) rotate(0deg);
-      }
-    }
-
-    &.right {
-      &:hover {
-        .card_image > img:last-of-type {
-          transform: scale(0.5) rotate(0deg);
-        }
-      }
-    }
+  50% {
+    color: rgb(0, 188, 143);
+  }
+  100% {
+    color: black;
   }
 }

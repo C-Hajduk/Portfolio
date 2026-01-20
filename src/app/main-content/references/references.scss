@@ -13,7 +13,11 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  > h2 {
+    @include respond-max(1024px) {
+      animation: colorChange 4s infinite;
+    }
+  }
   > p {
     text-align: center;
     margin: 50px;
@@ -37,12 +41,18 @@ section {
   min-height: 400px;
   border: 6px solid black;
   padding: 10px;
+  @include respond-max(1024px) {
+    animation: borderColorChange 4s infinite;
+  }
   > div {
     display: flex;
     flex-direction: column;
     align-items: center;
     > svg {
       margin-bottom: 20px;
+      @include respond-max(1024px) {
+        animation: svgColorChange 4s infinite;
+      }
     }
     > div {
       display: flex;
@@ -75,4 +85,34 @@ section {
   font-weight: 400;
   font-size: 18px;
   margin-top: 25px;
+}
+
+@keyframes colorChange {
+  0% {
+    color: black;
+  }
+  50% {
+    color: rgb(0, 188, 143);
+  }
+  100% {
+    color: black;
+  }
+}
+
+@keyframes borderColorChange {
+  0%, 100% {
+    border-color: black;
+  }
+  50% {
+    border-color: rgb(0, 188, 143);
+  }
+}
+
+@keyframes svgColorChange {
+  0%, 100% {
+    color: black;
+  }
+  50% {
+    color: rgb(0, 188, 143);
+  }
 }

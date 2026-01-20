@@ -31,6 +31,9 @@ section {
       background-color: #fffbf2;
       @include text-style-responsive(32px, 48px, 64px, 'Syne', 800);
       white-space: nowrap;
+      @include respond-max(1024px) {
+        animation: colorChange 4s infinite;
+      }
     }
   }
 }
@@ -174,5 +177,17 @@ section {
   }
   100% {
     transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: black;
+  }
+  50% {
+    color: rgb(0, 188, 143);
+  }
+  100% {
+    color: black;
   }
 }

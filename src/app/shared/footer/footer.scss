@@ -13,7 +13,7 @@ section {
   padding: clamp(20px, 7.2vw, 100px);
   @include respond-max($break-md) {
     flex-direction: column;
-    padding-bottom: 60px;
+    padding-bottom: 70px;
   }
 }
 

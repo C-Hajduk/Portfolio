@@ -1,6 +1,6 @@
 @use '../../../styles/mixin.scss' as *;
 
-section {
+.layout {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -23,13 +23,21 @@ section {
   max-width: 1440px;
   @include spacing(margin-top, 100px, 50px, 25px);
 
+  @include respond-max(600px) {
+    margin-top: 15px;
+  }
+
   > div {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 25px;
-    font-size: clamp(32px, 9vw, 96px);
+    font-size: clamp(28px, 7vw, 96px);
+
+    @include respond-max(600px) {
+      margin-bottom: 15px;
+    }
 
     &:hover > .hover-div {
       opacity: 0;
@@ -80,7 +88,11 @@ footer {
   margin-top: auto;
   background-image: url(../../../../public/assets/img/Rectangle5.png);
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  padding-top: 25px;
+  @include respond($break-xxl) {
+    min-height: -webkit-fill-available;
+  }
 
   .contact_wrapper {
     display: flex;
@@ -91,6 +103,14 @@ footer {
     margin-bottom: -3px;
     color: rgb(255, 252, 243);
     justify-content: space-between;
+    @include respond-max($break-xs) {
+      flex-direction: column;
+      gap: 15px;
+      padding: 15px;
+    }
+    @include respond($break-xxl) {
+    margin-top: 150px;
+  }
   }
   .contact {
     display: flex;
@@ -101,6 +121,12 @@ footer {
   .contact_text {
     h2 {
       margin-bottom: 15px;
+      @include respond-max(1024px) {
+        animation: colorChange 4s infinite;
+      }
+      @include respond-max(600px) {
+        margin-bottom: 8px;
+      }
     }
   }
   .socials {
@@ -108,6 +134,9 @@ footer {
     justify-content: center;
     align-items: flex-end;
     gap: 60px;
+    @include respond-max(600px) {
+      gap: 30px;
+    }
     a {
       display: inline-block;
       &:hover {
@@ -118,6 +147,10 @@ footer {
       background-color: black;
       width: 30px;
       height: 30px;
+      @include respond-max(600px) {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 }
@@ -151,5 +184,17 @@ footer {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: white;
+  }
+  50% {
+    color: rgb(0, 188, 143);
+  }
+  100% {
+    color: white;
   }
 }

@@ -40,6 +40,9 @@ section {
     &:hover {
       color: rgba(0, 188, 143, 1);
     }
+    @include respond-max(1024px) {
+        animation: colorChange 4s infinite;
+      }
   }
 
   > :nth-child(2) {
@@ -268,5 +271,17 @@ section {
   }
   100% {
     transform: scaleY(1) translateY(-50%);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: white;
+  }
+  50% {
+    color: rgb(0, 188, 143);
+  }
+  100% {
+    color: white;
   }
 }
