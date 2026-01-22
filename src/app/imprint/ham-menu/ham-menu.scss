@@ -108,7 +108,7 @@ footer {
       gap: 15px;
       padding: 15px;
     }
-    @include respond(1600px) {
+    @include respond(2000px) {
     margin-top: 150px;
   }
   }
