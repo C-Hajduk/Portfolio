@@ -81,7 +81,7 @@
             required
           />
           {{ 'contact.labelPrivacyText1' | translate }}
-          <a routerLink="/privacy-policy"
+          <a routerLink="/privacy-policy" target="_blank"
             ><span>{{ 'contact.labelPrivacyLink' | translate }}</span></a
           >
           {{ 'contact.labelPrivacyText2' | translate }}
@@ -90,12 +90,15 @@
           }
         </p>
 
-        <div class="btn-desktop">
+        <div class="btn-desktop" [class.valid]="contactForm.valid">
           <input type="submit" value="{{ 'contact.btnSubmit-desktop' | translate }}" />
         </div>
-        <div class="btn-mobile">
+        <div class="btn-mobile" [class.valid]="contactForm.valid">
           <input type="submit" value="{{ 'contact.btnSubmit-mobile' | translate }}" />
         </div>
+        @if (messageSent) {
+          <p class="success-message">{{ 'contact.successMessage' | translate }}</p>
+        }
         <a href="#hero"><img class="arrow" src="assets/icons/arrow_up.svg" alt="" /></a>
       </form>
     </div>

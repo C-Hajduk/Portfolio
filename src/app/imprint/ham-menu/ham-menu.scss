@@ -108,7 +108,7 @@ footer {
       gap: 15px;
       padding: 15px;
     }
-    @include respond($break-xxl) {
+    @include respond(1600px) {
     margin-top: 150px;
   }
   }
@@ -120,9 +120,10 @@ footer {
   }
   .contact_text {
     h2 {
+      white-space: nowrap;
       margin-bottom: 15px;
       @include respond-max(1024px) {
-        animation: colorChange 4s infinite;
+        animation: colorChangeWhite 4s infinite;
       }
       @include respond-max(600px) {
         margin-bottom: 8px;
@@ -187,7 +188,7 @@ footer {
   }
 }
 
-@keyframes colorChange {
+@keyframes colorChangeWhite {
   0% {
     color: white;
   }

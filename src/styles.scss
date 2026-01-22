@@ -49,6 +49,7 @@ p {
   font-family: 'Overpass';
 }
 
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -117,4 +118,45 @@ select:-webkit-autofill:focus {
   font-style: normal;
   font-weight: 700;
   src: url('../public/assets/fonts/overpass-v19-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+// ========================================
+// 8. KEYFRAMES
+// ========================================
+@keyframes colorChange {
+  0% {
+    color: black;
+  }
+  50% {
+    color: rgb(0, 188, 143);
+  }
+  100% {
+    color: black;
+  }
+}
+
+@keyframes showBorder {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes colorChangeWhite {
+  0% {
+    color: white;
+  }
+  50% {
+    color: rgb(0, 188, 143);
+  }
+  100% {
+    color: white;
+  }
+}
+
+// Language-specific width for privacy link
+html[lang='de'] app-contact .checkbox a span {
+  width: 152px !important;
 }

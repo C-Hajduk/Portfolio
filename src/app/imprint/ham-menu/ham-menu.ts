@@ -4,10 +4,11 @@ import { ViewportScroller } from '@angular/common';
 import { Header } from '../../shared/header/header';
 import { BurgermenuService } from '../../burgermenu-service';
 import { Footer } from '../../shared/footer/footer';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-ham-menu',
-  imports: [Header, Footer],
+  imports: [Header, Footer, TranslatePipe],
   templateUrl: './ham-menu.html',
   styleUrl: './ham-menu.scss',
 })

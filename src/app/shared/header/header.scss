@@ -18,7 +18,9 @@ section {
   @include spacing(padding, 0 20px, 0 50px, 0 100px);
 
   > a {
-    cursor: default;
+    cursor: pointer;
+    @include spacing(width, 50px, 55px, 60px);
+    @include spacing(height, 50px, 55px, 60px);
     > img {
       @include spacing(width, 50px, 55px, 60px);
       @include spacing(height, 50px, 55px, 60px);

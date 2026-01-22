@@ -3,7 +3,7 @@
 section {
   display: flex;
   flex-direction: column;
-  margin: 100px auto 200px;
+  min-height: 100vh;
 
   > h1 {
     display: flex;
@@ -14,6 +14,17 @@ section {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
     line-height: 1.1;
+
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    font-size: clamp(42px, 5vw, 90px);
+    
+  }
+  
+  @media (min-width: 1441px) and (max-width: 1920px) {
+    font-size: clamp(48px, 5vw, 100px);
+    
+    
+  }
   }
   > div:first-of-type {
     display: flex;

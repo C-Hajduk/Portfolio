@@ -8,7 +8,7 @@
         (mouseup)="hideBorder()"
       >
         <div class="hover-div"></div>
-        <p (click)="navigateTo('about-me')">About me</p>
+        <p (click)="navigateTo('about-me')">{{ 'ham-menu.aboutMe' | translate }}</p>
       </div>
       <div
         [class]="{ showBorder: activeIndex === 1 }"
@@ -16,7 +16,7 @@
         (mouseup)="hideBorder()"
       >
         <div class="hover-div"></div>
-        <p (click)="navigateTo('skills')">My Skills</p>
+        <p (click)="navigateTo('skills')">{{ 'ham-menu.skills' | translate }}</p>
       </div>
       <div
         [class]="{ showBorder: activeIndex === 2 }"
@@ -24,7 +24,7 @@
         (mouseup)="hideBorder()"
       >
         <div class="hover-div"></div>
-        <p (click)="navigateTo('portfolio')">Portfolio</p>
+        <p (click)="navigateTo('portfolio')">{{ 'ham-menu.portfolio' | translate }}</p>
       </div>
     </div>
     <footer>
@@ -33,7 +33,7 @@
         <div class="contact_wrapper">
 
           <div class="contact_text">
-            <h2>Say Hi!</h2>
+            <h2>{{ 'ham-menu.sayHi' | translate }}</h2>
             <p>christian.hajduk@outlook.de</p>
           </div>
 

@@ -24,6 +24,7 @@ export class Contact {
   };
 
   mailTest = false;
+  messageSent = false;
 
   post = {
     endPoint: 'https://christianhajduk.de/sendMail.php',
@@ -42,6 +43,8 @@ export class Contact {
       this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
         next: (response) => {
           ngForm.resetForm();
+          this.messageSent = true;
+          setTimeout(() => this.messageSent = false, 3000);
         },
         error: (error) => {
           console.error(error);
@@ -50,6 +53,8 @@ export class Contact {
       });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
+      this.messageSent = true;
+      setTimeout(() => this.messageSent = false, 3000);
     }
   }
 }

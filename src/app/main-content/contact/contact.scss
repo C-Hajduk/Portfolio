@@ -1,39 +1,25 @@
 @use '../../../styles/mixin.scss' as *;
 
 section {
-  // position: relative;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
   background-image: url(./../../../../public/assets/img/Rectangle5.png);
   background-repeat: no-repeat;
   background-size: cover;
-  // width: 100%;
-  // max-width: 1440px;
-  
 }
 
 .contact_wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: clamp(20px, 7.2vw, 100px);
-    margin-bottom: -3px;
-  
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(20px, 7.2vw, 100px);
+  margin-bottom: -3px;
 
   > h2 {
     font-size: clamp(45px, 7vw, 78px);
-    white-space: nowrap;
-    @include spacing(
-      margin,
-      50px 10px 30px 10px,
-      100px 50px 45px 50px,
-      150px 100px 60px 100px
-    );
+    @include spacing(margin, 50px 10px 30px 5px, 100px 50px 45px 50px, 150px 100px 60px 100px);
     align-self: flex-start;
     color: rgb(255, 252, 243);
     background-color: black;
@@ -41,8 +27,8 @@ section {
       color: rgba(0, 188, 143, 1);
     }
     @include respond-max(1024px) {
-        animation: colorChange 4s infinite;
-      }
+      animation: colorChangeWhite 4s infinite;
+    }
   }
 
   > :nth-child(2) {
@@ -91,6 +77,14 @@ section {
   width: 100%;
   margin: 25px 0;
 
+  > input {
+    height: 44px;
+  }
+
+  > textarea {
+    height: 224px;
+  }
+
   > input,
   textarea {
     width: 100%;
@@ -101,7 +95,6 @@ section {
     padding: 12px 0px 8px;
     @include text-style($size: 16px);
     resize: none;
-    
 
     &:focus + label,
     &:not(:placeholder-shown) + label {
@@ -157,6 +150,15 @@ section {
   background-color: #ff4444;
   color: white;
   font-size: 25px;
+
+  @include respond-max(375px) {
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+    transform: none;
+    top: 15px;
+    right: 5px;
+  }
 }
 
 .success-icon {
@@ -172,6 +174,14 @@ section {
   height: 24px;
   background-color: #00bc8f;
   color: white;
+
+  @include respond-max(375px) {
+    width: 15px;
+    height: 15px;
+    right: 5px;
+    top: 5px;
+    transform: none;
+  }
 }
 
 .checkbox {
@@ -185,6 +195,7 @@ section {
   > a {
     background-color: black;
     text-decoration: none;
+
     &:hover {
       font-weight: bold;
     }
@@ -193,6 +204,9 @@ section {
       color: rgba(0, 188, 143, 1);
       margin: 0px 4px;
       cursor: pointer;
+      display: inline-flex;
+      justify-content: center;
+      width: 92px;
     }
   }
 }
@@ -213,6 +227,10 @@ section {
     color: rgba(187, 187, 187, 0.5);
     background-color: black;
     cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  &.valid > input {
+    color: white;
   }
   @include respond-max($break-md) {
     display: none;
@@ -235,9 +253,34 @@ section {
     color: rgba(187, 187, 187, 0.5);
     background-color: black;
     cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  &.valid > input {
+    color: white;
   }
   @include respond($break-md) {
     display: none;
+  }
+}
+
+.success-message {
+  text-align: center;
+  color: rgba(0, 188, 143, 1);
+  background-color: black;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -274,7 +317,7 @@ section {
   }
 }
 
-@keyframes colorChange {
+@keyframes colorChangeWhite {
   0% {
     color: white;
   }

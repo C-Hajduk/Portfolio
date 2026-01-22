@@ -29,7 +29,6 @@ section {
       transform: translate(-50%, -50%);
       padding: 0 10px;
       background-color: #fffbf2;
-      @include text-style-responsive(32px, 48px, 64px, 'Syne', 800);
       white-space: nowrap;
       @include respond-max(1024px) {
         animation: colorChange 4s infinite;
@@ -105,7 +104,9 @@ section {
   flex-direction: row;
   align-items: flex-end;
   justify-content: center;
-  text-align: left;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
   @include spacing(gap, 15px, 20px, 30px);
   @include spacing(margin-bottom, 20px, 30px, 40px); // Reduced margin top
 
@@ -113,7 +114,6 @@ section {
   @include respond-max($break-sm) {
     flex-direction: row;
     align-items: center;
-    // padding: 0 10px; // Add padding to prevent edge touching
   }
 
   p:first-of-type {
@@ -132,14 +132,7 @@ section {
   p:last-of-type {
     line-height: 1.4;
     @include text-style-responsive(14px, 18px, 22px, 'Overpass', 400);
-
-    // Flex container for the text to wrap nicely
-    display: flex;
-    align-items: flex-end;
-
-    @include respond-max($break-sm) {
-      flex-direction: column;
-    }
+    text-align: center;
     > a {
       text-decoration: none;
       display: inline-block;

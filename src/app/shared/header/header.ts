@@ -1,4 +1,4 @@
-import { Component, signal, inject } from '@angular/core';
+import { Component, signal, inject, DOCUMENT } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { BurgermenuService } from '../../burgermenu-service';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -11,6 +11,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
   styleUrl: './header.scss',
 })
 export class Header {
+  private document = inject(DOCUMENT);
   burgermenu = inject(BurgermenuService);
   translate = inject(TranslateService);
 
@@ -23,5 +24,6 @@ export class Header {
   switchLanguage(button: 'btn1' | 'btn2', language: string): void {
     this.activeButton.set(button);
     this.translate.use(language);
+    this.document.documentElement.lang = language;
   }
 }
