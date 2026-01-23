@@ -156,6 +156,24 @@ select:-webkit-autofill:focus {
   }
 }
 
+@keyframes borderColorChange {
+  0%, 100% {
+    border-color: black;
+  }
+  50% {
+    border-color: rgb(0, 188, 143);
+  }
+}
+
+@keyframes svgColorChange {
+  0%, 100% {
+    color: black;
+  }
+  50% {
+    color: rgb(0, 188, 143);
+  }
+}
+
 // Language-specific width for privacy link
 html[lang='de'] app-contact .checkbox a span {
   width: 152px !important;

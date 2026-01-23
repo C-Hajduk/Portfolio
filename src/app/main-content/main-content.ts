@@ -7,10 +7,11 @@ import { ArrowLeft } from './arrow-left/arrow-left';
 import { Portfolio } from './portfolio/portfolio';
 import { References } from './references/references';
 import { Contact } from './contact/contact';
+import { RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-main-content',
-  imports: [Hero, AboutMe, ArrowRight, Skills, ArrowLeft, Portfolio, References, Contact],
+  imports: [Hero, AboutMe, ArrowRight, Skills, ArrowLeft, Portfolio, References, Contact, RouterOutlet],
   templateUrl: './main-content.html',
   styleUrl: './main-content.scss',
 })

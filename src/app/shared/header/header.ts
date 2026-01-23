@@ -2,11 +2,12 @@ import { Component, signal, inject, DOCUMENT } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { BurgermenuService } from '../../burgermenu-service';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgClass, TranslatePipe],
+  imports: [NgClass, TranslatePipe, RouterLink],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
